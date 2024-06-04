@@ -8,7 +8,7 @@ export default function Heros() {
     muted
     loop
     className='rotate-180 absolute top-[-340px] left-0  z-[1] w-full h-full object-cover'>
-        <source  src='/GoldBlackhole.mp4' type='video/mp4'/>
+        <source  src='/blackhole.webm' type='video/webm'/>
     </video>
     </div>
   )
