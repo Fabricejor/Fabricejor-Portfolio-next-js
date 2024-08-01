@@ -249,4 +249,4 @@ export const Skill_data = [
       width: 60,
       height: 60,
     },
-  ];
+  ];//reprise
