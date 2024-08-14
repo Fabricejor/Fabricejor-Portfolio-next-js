@@ -83,15 +83,18 @@ export const Skill_data = [
   export const Socials = [
     {
       name: "Discord",
-      src: "/instagram.svg",
+      src: "/discord.svg",
+      linked:"https://discordapp.com/users/564543375026552844"
     },
     {
-      name: "Facebook",
-      src: "/facebook.svg",
+      name: "Github",
+      src: "/github-mark-white.svg",
+      linked:"https://github.com/Fabricejor"
     },
     {
       name: "Instagram",
-      src: "/discord.svg",
+      src: "/instagram.svg",
+      linked: "https://www.instagram.com/jordan_ramos_disciple_of_god/"
     },
   ];
   
