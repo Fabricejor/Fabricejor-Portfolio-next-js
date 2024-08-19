@@ -2,6 +2,7 @@ import Image from "next/image";
 import Heros from "@/components/main/Heros";
 import Skills from "@/components/main/Skills";
 import Encryption from "@/components/main/Encryption";
+import Projects from "@/components/main/Projects";
 export default function Home() {
   return (
     <main className="h-full w-full">
@@ -9,6 +10,7 @@ export default function Home() {
         <Heros/>
         <Skills/>
         <Encryption/>
+        <Projects/>
       </div>
     </main>
   );
