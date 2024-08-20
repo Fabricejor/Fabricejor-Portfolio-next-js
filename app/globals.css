@@ -9,16 +9,16 @@
   font-family: "Cedarville Cursive", cursive;
 }
 .Welcome-text {
-  background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4)
-    ),
-    linear-gradient(90.01deg, #e59cff 0.01%, #ba9cff 50.01%, #9cb2ff 100%);
+  color: blueviolet;
   background-blend-mode: normal, screen;
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
+  transition: 1.2s;
+  @media not all and (min-width: 640px) { 
+    color: rgb(139, 27, 237);
+
+   }
 }
 .Welcome-box {
   isolation: isolate;
@@ -34,6 +34,20 @@
   width: -moz-max-content;
   width: max-content;
   transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
+  transition: 1.2s;
+  @media not all and (min-width: 640px) { 
+    border: 3px solid blueviolet;
+    
+  }
+}
+.Welcome-box:hover{
+  background: white;
+  border: 3px solid;
+  
+}
+.Welcome-text:hover{
+  color: #E50914;
+  font-weight: 500;
 }
 
 .button-primary {

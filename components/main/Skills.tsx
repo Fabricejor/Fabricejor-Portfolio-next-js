@@ -1,13 +1,19 @@
-import { scale } from 'maath/dist/declarations/src/vector2'
-import React from 'react'
-import SkillDataProvider from '../sub/SkillDataProvider'
-import SkillText from '../sub/SkillText'
-import { Frontend_skill ,Other_skill ,Full_stack ,Backend_skill ,Skill_data} from '@/constants'
-function Skills() {
+import {
+  Backend_skill,
+  Frontend_skill,
+  Full_stack,
+  Other_skill,
+  Skill_data,
+} from "@/constants";
+import React from "react";
+import SkillDataProvider from "../sub/SkillDataProvider";
+import SkillText from "../sub/SkillText";
+
+const Skills = () => {
   return (
-     <section
+    <section
       id="skills"
-      className="flex flex-col items-center justify-center gap-3 h-full relative  mt-40 pb-80 py-20"
+      className="flex flex-col items-center justify-center gap-3 h-full relative mt-[10%] pb-80 py-20 max-sm:mt-[500px]"
       style={{ transform: "scale(0.9" }}
     >
       <SkillText />
@@ -83,7 +89,7 @@ function Skills() {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
