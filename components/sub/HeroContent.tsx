@@ -49,8 +49,10 @@ const HeroContent = () => {
         <motion.a
           variants={slideInFromLeft(1)}
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+          href='#skills'
         >
-         <Link href={"#skills"}> Voir plus!</Link>
+         {/* <Link href="#skills"> Voir plus!</Link> */}
+         <span  title='mes skills'>voir plus</span>
         </motion.a>
       </div>
       <motion.div
@@ -62,8 +64,8 @@ const HeroContent = () => {
           alt="profile"
           height={350}
           width={350}
-          onMouseEnter={() => setImageSrc('/PhotoProfil.png')}
-          onMouseLeave={() => setImageSrc('/PhotoProfilIA.jpeg')}
+          // onMouseEnter={() => setImageSrc('/PhotoProfil.png')}
+          // onMouseLeave={() => setImageSrc('/PhotoProfil.png')}
           className='rounded-[40%] filter grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-1000'
         />
       </motion.div>
