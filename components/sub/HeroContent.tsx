@@ -1,13 +1,17 @@
 "use client"
 import React from 'react'
+import { useState } from 'react';
 import {motion} from 'framer-motion'
 import { slideInFromLeft, slideInFromTop ,slideInFromRight } from '@/utils/motion'
 import { SparklesIcon } from "@heroicons/react/24/solid"
 import Image from "next/image";
+import Link from 'next/link';
 
 
 //https://diploma.gomycode.app/?id=31716817358394535 link a utiliser pour plus tard
 const HeroContent = () => {
+  const [imageSrc, setImageSrc] = useState('/photoprofilIA.jpeg');
+
   return (
     <motion.div
     initial='hidden'
@@ -28,37 +32,39 @@ const HeroContent = () => {
           className="flex flex-col gap-6 mt-6 text-6xl max-sm:text-4xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
           <span>
-            Fullstack Develloppeur
+            Dévelloppeur
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
-              Javascript
+              Fullstack Js
               {" "}
             </span>
           </span>
         </motion.div>
         <motion.p
           variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-400 my-5 max-w-[600px]"
+          className="text-lg text-gray-400 my-5 max-w-[600px] text-justify"
         >
-          I&apos;m a Full Stack Software Engineer with experience in Website,
-          Mobile, and Software development. Check out my projects and skills.
+          Développeur Full Stack passionné par le numérique et les nouvelles technologies, j'ai une solide expérience en développement web et mobile. Toujours à l'affût de nouveaux défis, je cherche sans cesse à perfectionner mes compétences techniques. Mon objectif est de contribuer activement à la réussite de vos projets.
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
         >
-          Learn More!
+         <Link href={"#skills"}> Voir plus!</Link>
         </motion.a>
       </div>
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center max-sm:mt-8  max-sm:w-[250px]"
+        className="w-full h-full flex justify-center items-center  max-sm:mt-8  max-sm:w-[250px]"
       >
         <Image
-          src="/mainIconsdark.svg"
-          alt="work icons"
-          height={650}
-          width={650}
+          src={imageSrc}
+          alt="profile"
+          height={350}
+          width={350}
+          onMouseEnter={() => setImageSrc('/PhotoProfil.png')}
+          onMouseLeave={() => setImageSrc('/PhotoProfilIA.jpeg')}
+          className='rounded-[40%] filter grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-1000'
         />
       </motion.div>
     </motion.div>
