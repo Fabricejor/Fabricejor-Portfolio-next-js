@@ -28,18 +28,17 @@ const Encryption = () => {
         </motion.div>
       </div>
       {/* les diplomes */} 
-      <div className="w-full flex flex-col items-center mt-[10%] px-9">
+      <div className="w-full flex flex-col items-center mt-[30%] px-9 max-sm:px-0 max-sm:mt-[850px]">
       {/* ? premier diplome */}
       <motion.div
-    initial='hidden'
     animate='visible'
-    className='flex flex-row items-center justify-center px-20 mt-0 w-full z-[20] max-sm:flex-col max-sm:mb-[10%] max-sm:mt-[200px]'>
+    className='flex flex-row items-center justify-center px-20 mt-0 w-full z-[20] max-sm:flex-col max-sm:px-8 max-sm:mt-[0px]'>
       <div className='h-full w-full flex flex-col justify center m-auto text-start'>
         <motion.div
           variants={slideInFromLeft(0.5)}
           className="flex flex-col  mt-6  font-bold text-white max-w-[500px] w-auto"
         >
-          <span className="TitredelaFormation  text-2xl">
+          <span className="TitredelaFormation text-justify text-2xl">
           Bootcamp Fullstack Js, Gomycode, Dakar
           </span>
           <span className="text-gray-400 text-1x1 italic">
@@ -48,17 +47,18 @@ const Encryption = () => {
         </motion.div>
         <motion.p
           variants={slideInFromLeft(0.8)}
-          className="text-1x1 text-gray-200 my-5 max-w-[500px] text-justify"
+          className="text-1x1 text-gray-200 my-5 max-w-[600px] text-justify"
         >
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          J'ai suivi un bootcamp intensif de 5 mois en développement full-stack JavaScript, couvrant à la fois le front-end et le back-end. J'y ai acquis une solide maîtrise des fondamentaux du développement web, des bases de données, et de la création d'applications dynamiques, tout en mettant en pratique mes compétences à travers des projets concrets.
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[100px]"
-          href='https://diploma.gomycode.app/?id=31716817358394535'
+          href='https://gomycode.com/sn/fr/courses/bootcamp-developpeur-logiciel/'
           target="_Blank"
+          title='Ma certfication'
         >
-         <span  title='mes skills' onClick={handleClick1}>voir plus</span>
+         <span >voir plus</span>
         </motion.a>
       </div>
       <motion.div
@@ -76,15 +76,14 @@ const Encryption = () => {
     </motion.div>
     {/* 2eme diplome */}
     <motion.div
-    initial='hidden'
     animate='visible'
-    className='flex flex-row items-center justify-center px-20 mt-10 w-full z-[20] max-sm:flex-col max-sm:mb-[10%] max-sm:mt-[200px]'>
+    className='flex flex-row items-center justify-center px-20 mt-4 w-full z-[20] max-sm:flex-col max-sm:mb-[10%] max-sm:mt-4 max-sm:px-8'>
       <div className='h-full w-full flex flex-col justify center m-auto text-start'>
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col  mt-6  font-bold text-white max-w-[550px] w-auto"
+          className="flex flex-col  mt-0  font-bold text-white max-w-[550px] w-auto"
         >
-          <span className="TitredelaFormation  text-2xl">
+          <span className="TitredelaFormation  text-justify text-2xl">
           Licence Professionnelle en Génie Logicielle, École supérieur
           Polytechnique, Dakar
           </span>
@@ -96,15 +95,16 @@ const Encryption = () => {
           variants={slideInFromLeft(0.8)}
           className="text-1x1 text-gray-200 my-5 max-w-[500px] text-justify"
         >
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          J'ai obtenu une Licence Professionnelle en Génie Logiciel, qui m'a permis de développer des compétences avancées en développement d'applications, gestion de projets informatiques, et en ingénierie logicielle. Cette formation m'a préparé à concevoir des solutions informatiques innovantes en utilisant des technologies récentes, tout en m'adaptant aux évolutions rapides du secteur.
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[100px]"
-          href='https://diploma.gomycode.app/?id=31716817358394535'
+          className="py-2 button-primary text-center justify-center text-white cursor-pointer rounded-lg max-w-[100px]"
+          href='https://esp.sn/formations/licence-professionnelle-en-genie-logiciel/'
           target="_Blank"
+          title='Intitulé de mon diplôme'
         >
-         <span  title='mes skills' onClick={handleClick1}>voir plus</span>
+         <span  >Esp.sn</span>
         </motion.a>
       </div>
       <motion.div
@@ -112,17 +112,17 @@ const Encryption = () => {
         className="w-full h-full flex justify-center items-center  max-sm:mt-8  max-sm:w-[150px]"
       >
         <Image
-          src={'/gomycode.jpg'}
+          src={'/esp.png'}
           alt="profile"
           height={150}
           width={150}
-          className='rounded-[40%] filter grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-1000'
+          className='rounded-[4%] p-5 bg-white filter grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-1000'
         />
       </motion.div>
     </motion.div>
     </div>
     {/* video */}
-      <div className="w-full h-full flex items-start justify-center absolute">
+      <div className="w-full h-full flex items-start justify-center absolute max-sm:hidden">
         <video
           loop
           muted
