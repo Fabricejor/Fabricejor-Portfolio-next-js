@@ -13,7 +13,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center gap-3 h-full relative mt-[10%] pb-80 py-20 max-sm:mt-[70vh]"
+      className="flex flex-col items-center justify-center gap-3 h-full relative mt-[10%] Z-30 pb-80 py-20 max-sm:mt-[70vh]"
       style={{ transform: "scale(0.9" }}
     >
       <SkillText />
@@ -26,6 +26,8 @@ const Skills = () => {
             width={image.width}
             height={image.height}
             index={index}
+            title={image.skill_name}
+
           />
         ))}
       </div>
@@ -38,6 +40,7 @@ const Skills = () => {
             width={image.width}
             height={image.height}
             index={index}
+            title={image.skill_name}
           />
         ))}
       </div>
@@ -49,6 +52,7 @@ const Skills = () => {
             width={image.width}
             height={image.height}
             index={index}
+            title={image.skill_name}
           />
         ))}
       </div>
@@ -60,6 +64,8 @@ const Skills = () => {
             width={image.width}
             height={image.height}
             index={index}
+            title={image.skill_name}
+
           />
         ))}
       </div>
@@ -71,6 +77,8 @@ const Skills = () => {
             width={image.width}
             height={image.height}
             index={index}
+            title={image.skill_name}
+
           />
         ))}
       </div>

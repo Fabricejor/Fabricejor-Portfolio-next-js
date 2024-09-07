@@ -4,15 +4,17 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Image from 'next/image';
+import { title } from 'process';
 
 interface Props {
     src: string;
     width: number;
     height: number;
     index: number;
+    title:string;
 }
 
-const SkillDataProvider = ({ src, width, height, index} : Props) => {
+const SkillDataProvider = ({ src, width, height, index ,title} : Props) => {
     const {ref, inView} = useInView({
         triggerOnce: true
     })
@@ -37,6 +39,7 @@ src={src}
 width={width}
 height={height}
 alt='skill image'
+title={title}
     />
   </motion.div>
   )
