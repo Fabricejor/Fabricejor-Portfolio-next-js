@@ -1,0 +1,11 @@
+Model Information:
+* title:	Laptop HP Pavilion x360
+* source:	https://sketchfab.com/3d-models/laptop-hp-pavilion-x360-30224b94b1a041b487e957f08d5b1f4a
+* author:	chipmunkman (https://sketchfab.com/chipmunkman)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Laptop HP Pavilion x360" (https://sketchfab.com/3d-models/laptop-hp-pavilion-x360-30224b94b1a041b487e957f08d5b1f4a) by chipmunkman (https://sketchfab.com/chipmunkman) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
