@@ -1,9 +1,9 @@
 Ce qui reste a faire sur mon porte folio
--changer le background d'arriere plan Video et couleur d'arriere plan
--Customiser les icons de skills✅ 
+-changer le background d'arriere plan Video et couleur d'arriere plan✅ 
+-Customiser les icons de skills ✅ 
 -Rajouter du texte au niveau des diplômes✅ + VUE MOBILE
 -rajouter un button voir plus en desouds du titre du projet pour voir la page de tous les projets✅
 -la page de tous les projets continuant des screenshot et des button vers les code sources et demo
--Peut etre rajouter une formulaire d'email
+-Peut etre rajouter une formulaire d'email ✅  ( backend a gérer)
 
-2/6
+5/6

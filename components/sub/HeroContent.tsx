@@ -21,11 +21,11 @@ const HeroContent = () => {
         <motion.a
         variants={slideInFromTop}
         href='https://diploma.gomycode.app/?id=31716817358394535 '
-        className='Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9] 
-        max-sm:border-[#0d0b128b]
+        className='Welcome-box py-[8px] px-[7px] border border-[#00B1A8] opacity-[0.9] 
+        max-sm:border-[#5be6dc]
         hover:border-[#E50914]'
         >
-            <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5 "/>
+            <SparklesIcon className="text-[#5be6dc] mr-[10px] h-5 w-5 "/>
             <h1 className='Welcome-text text-[13px] max-sm:text-[10px] '>My Fullstack js Certification</h1>
         </motion.a>
         <motion.div
@@ -34,7 +34,7 @@ const HeroContent = () => {
         >
           <span>
             Dévelloppeur
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-300">
               {" "}
               Fullstack Js
               {" "}

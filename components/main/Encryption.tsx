@@ -20,7 +20,7 @@ const Encryption = () => {
           className="text-[40px] font-medium text-center text-gray-200"
         >
           Formations
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r  from-blue-700 to-cyan-300">
             {" "}
             &{" "}
           </span>
@@ -130,7 +130,7 @@ const Encryption = () => {
           playsInline
           preload="false"
           className="w-full h-auto"
-          src="/encryption.webm/"
+          src="/Loading b.mp4"
         />
       </div>
     </div>

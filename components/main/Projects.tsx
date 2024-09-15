@@ -7,10 +7,10 @@ import Link from "next/link";
 const Projects = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center py-20 mt-14 max-sm:mt-[70vh]"
+      className="flex flex-col items-center justify-center  py-0 mt-14 max-sm:mt-[70vh]"
       id="projects"
     >
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
+      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-300 py-20">
         Mes Projects 
       </h1>
       <Link 
