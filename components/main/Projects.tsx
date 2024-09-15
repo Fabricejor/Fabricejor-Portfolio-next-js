@@ -2,6 +2,7 @@
 import React from "react";
 import ProjectCard from "../sub/ProjectCard";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
 
 
 const Projects = () => {
@@ -23,17 +24,24 @@ const Projects = () => {
         <ProjectCard
           src="/CalameRedaction.png"
           title="Calame Rédaction - site vitrine"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          description="Création d'un site vitrine pour promouvoir les services de l'entreprise, utilisant HTML, CSS, et JavaScript. Un système d'e-mails automatiques a été intégré avec PHP."
+          demo="https://calame-redaction.infinityfreeapp.com/"
+          source="https://github.com/Fabricejor/Calame-Redaction"
+          
         />
         <ProjectCard
           src="/Bondprice.png"
           title="BondPrice - Plateforme de Téléchargement"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          description="Développement d'une application web sécurisée pour Bondprice Tool, avec une interface administrateur pour gérer les utilisateurs. Utilisation de HTML, CSS, JS, et PHP pour la sécurité et l'intégration de données CSV."
+          demo="https://bondpricer.000webhostapp.com"
+          source="https://github.com/Fabricejor/BondPricer-Pro"
         />
         <ProjectCard
           src="/MyCodeAirline.png"
           title="Airline- appli réservation de billets"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          description="Développement d'une application de réservation de billets d'avion en ligne avec gestion des utilisateurs et des vols. Utilisation du stack MERN : MongoDB, Express, React, et Node.js."
+          demo=""
+          source="https://github.com/Fabricejor/My-Code-Airlines"
         />
       </div>
     </div>
