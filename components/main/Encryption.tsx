@@ -28,7 +28,7 @@ const Encryption = () => {
         </motion.div>
       </div>
       {/* les diplomes */} 
-      <div className="w-full flex flex-col items-center mt-[30%] px-9 max-sm:px-0 max-sm:mt-[850px]">
+      <div className="w-full flex flex-col items-center mt-[25%] px-9 max-sm:px-0 max-sm:mt-[850px]">
       {/* ? premier diplome */}
       <motion.div
     animate='visible'
@@ -53,12 +53,12 @@ const Encryption = () => {
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[100px]"
+          className="p-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-max"
           href='https://gomycode.com/sn/fr/courses/bootcamp-developpeur-logiciel/'
           target="_Blank"
           title='Ma certfication'
         >
-         <span >voir plus</span>
+         <span >Gomycode.sn</span>
         </motion.a>
       </div>
       <motion.div
@@ -99,7 +99,7 @@ const Encryption = () => {
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center justify-center text-white cursor-pointer rounded-lg max-w-[100px]"
+          className="p-2 button-primary text-center justify-center text-white cursor-pointer rounded-lg max-w-max"
           href='https://esp.sn/formations/licence-professionnelle-en-genie-logiciel/'
           target="_Blank"
           title='Intitulé de mon diplôme'

@@ -1,4 +1,4 @@
-import Heros from '@/components/main/Heros'
+"use client"
 import React from 'react'
 
 export default function Inspiration() {

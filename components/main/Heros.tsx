@@ -10,7 +10,7 @@ const Hero = () => {
         autoPlay
         muted
         loop
-        className="rotate-180 absolute top-[-340px] max-xl:top-[-260px]  h-full w-full left-0 z-[1] object-cover max-sm:top-[-340px] "
+        className="rotate-180 absolute top-[-340px] max-xl:top-[-230px]  h-full w-full left-0 z-[1] object-cover max-sm:top-[-340px] "
       >
         <source src="/Blue fire black hole.mp4" type="video/webm" />
       </video>

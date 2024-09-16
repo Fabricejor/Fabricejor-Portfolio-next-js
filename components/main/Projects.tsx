@@ -2,13 +2,13 @@
 import React from "react";
 import ProjectCard from "../sub/ProjectCard";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
+import { CardBody } from "../ui/3d-card";
 
 
 const Projects = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center  py-0 mt-14 max-sm:mt-[70vh]"
+      className="flex flex-col items-center justify-center  py-0 mt-32 max-sm:mt-[70vh]"
       id="projects"
     >
       <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-300 py-20">
@@ -16,9 +16,9 @@ const Projects = () => {
       </h1>
       <Link 
       href={"/AllProjects"}
-         className="py-2 z-30 cursor-pointer px-2 button-primary text-center text-white rounded-lg max-w-[100%] mb-10 mt-[-20px]"
+         className="py-2 z-30 cursor-pointer px-2 button-primary text-center text-white rounded-lg max-w-[100%] mb-10 mt-[-30px]"
       >
-        All Projects
+        Tous mes projects
       </Link>
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
         <ProjectCard

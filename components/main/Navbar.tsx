@@ -3,10 +3,26 @@ import React from 'react'
 import Image from 'next/image';
 import { Socials } from "@/constants";
 import Link from 'next/link'
+import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
 
 const Navbar = () => {
+  const pathname = usePathname();
+  const [bgColor, setBgColor] = useState('');
+
+  useEffect (()=> {
+    switch (pathname) {
+      case "/Inspiration":
+        setBgColor("bg-[#191717]");
+        break;
+    
+      default:
+        setBgColor("bg-[#03001417]");
+        break;
+    }
+  })
   return (
-    <div className='w-full h-[65px] fixed top-0 shadow-lg shadow-[#2AOE61]/50  bg-[#03001417] backdrop-blur-md z-50 px-10 max-sm:px-[10px]'>
+    <div className={`w-full h-[65px] fixed top-0 shadow-lg shadow-[#2AOE61]/50  ${bgColor} backdrop-blur-md z-50 px-10 max-sm:px-[10px]`}>
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px] max-sm:px-[0px] ">
         <a title='More about me' href="/" className='h-auto w-auto flex flex-row items-center'>
         <Image

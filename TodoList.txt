@@ -6,7 +6,8 @@ Ce qui reste a faire sur mon porte folio
 -la page de tous les projets continuant des screenshot et des button vers les code sources et demo
 -Peut etre rajouter une formulaire d'email ✅  ( backend a gérer)
 
+-BARRE DE NAVIGATION VERSION MOBILE
 -la page de tous les projets continuant des screenshot et des button vers 
 les code sources et demo✅
 
-5.5/6
+5.5/7
