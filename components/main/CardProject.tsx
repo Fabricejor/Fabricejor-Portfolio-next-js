@@ -38,6 +38,7 @@ export default function CardProject() {
             <strong className='text-white underline mr-2'>Technologies: </strong>
             <p className='text-white max-w-[80%] text-wrap text-justify'>Java ,PHP , Typescript</p>
       </div>
+      
     </div>
   )
 }
