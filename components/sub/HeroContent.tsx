@@ -45,7 +45,7 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px] text-justify"
         >
-          Développeur Full Stack passionné par le numérique et les nouvelles technologies, j'ai une solide expérience en développement web et mobile. Toujours à l'affût de nouveaux défis, je cherche sans cesse à perfectionner mes compétences techniques. Mon objectif est de contribuer activement à la réussite de vos projets.
+          Développeur Full Stack passionné par le numérique et les nouvelles technologies, j&apos;ai une solide expérience en développement web et mobile. Toujours à l&apos;affût de nouveaux défis, je cherche sans cesse à perfectionner mes compétences techniques. Mon objectif est de contribuer activement à la réussite de vos projets.
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}

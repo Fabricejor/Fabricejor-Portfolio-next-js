@@ -1,14 +1,24 @@
 "use client"
-import React from 'react'
+import React ,{useState} from 'react'
 import { IoIosGlobe } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+import TestCarousel from './TestCarousel';
+import Image from 'next/image';
 
 export default function CardProject() {
+    // Un usestate pour montrer les screenshots
+    const [showScreenshot, setShowScreenshot] =useState(false);
+    // Fonction pour gérer le clic du bouton
+  const toggleCarousel = () => {
+    setShowScreenshot(!showScreenshot);
+    console.log(showScreenshot);
+    
+  };
   return (
     <div className='Projet_CONTAINER mt-3 flex flex-col px-5 rounded-lg bg-gray-800  bg-opacity-90   border-8 border-slate-300 border-opacity-20 shadow-lg"'>
       <div className='flex flex-row justify-between'>
         <h1 className='text-white text-4xl'> TITRE DU PROJET</h1>
-        <img src="/Logo projet 1.png" className='max-w-[15%] h-auto mt-0' alt="logo" />
+        <Image src="/Logo projet 1.png" className='max-w-[15%] h-auto mt-0' alt="logo" />
       </div>
       <div className='flex flex-row justify-between'>
         <div className='paragraphe_CONTAINER ml-10'>
@@ -38,7 +48,19 @@ export default function CardProject() {
             <strong className='text-white underline mr-2'>Technologies: </strong>
             <p className='text-white max-w-[80%] text-wrap text-justify'>Java ,PHP , Typescript</p>
       </div>
-      
+       {/* Bouton pour afficher/masquer le carousel */}
+       <button
+        onClick={toggleCarousel}
+        className="px-4 py-2 bg-blue-600 text-white rounded-md mb-4 hover:bg-blue-700 transition"
+      >
+        {showScreenshot ? "Hide Screenshot" : "Show Screenshot"}
+      </button>
+    {/* Bloc de code contenant le carousel, affiché conditionnellement */}
+    {showScreenshot && (
+        <div className="w-full h-full flex justify-center">
+          <TestCarousel  />
+        </div>
+      )}
     </div>
   )
 }

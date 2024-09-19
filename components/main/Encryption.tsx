@@ -49,7 +49,7 @@ const Encryption = () => {
           variants={slideInFromLeft(0.8)}
           className="text-1x1 text-gray-200 my-5 max-w-[600px] text-justify"
         >
-          J'ai suivi un bootcamp intensif de 5 mois en développement full-stack JavaScript, couvrant à la fois le front-end et le back-end. J'y ai acquis une solide maîtrise des fondamentaux du développement web, des bases de données, et de la création d'applications dynamiques, tout en mettant en pratique mes compétences à travers des projets concrets.
+          J&apos;ai suivi un bootcamp intensif de 5 mois en développement full-stack JavaScript, couvrant à la fois le front-end et le back-end. J&apos;y ai acquis une solide maîtrise des fondamentaux du développement web, des bases de données, et de la création d&apos;applications dynamiques, tout en mettant en pratique mes compétences à travers des projets concrets.
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
@@ -95,7 +95,7 @@ const Encryption = () => {
           variants={slideInFromLeft(0.8)}
           className="text-1x1 text-gray-200 my-5 max-w-[500px] text-justify"
         >
-          J'ai obtenu une Licence Professionnelle en Génie Logiciel, qui m'a permis de développer des compétences avancées en développement d'applications, gestion de projets informatiques, et en ingénierie logicielle. Cette formation m'a préparé à concevoir des solutions informatiques innovantes en utilisant des technologies récentes, tout en m'adaptant aux évolutions rapides du secteur.
+          J&apos;ai obtenu une Licence Professionnelle en Génie Logiciel, qui m&apos;a permis de développer des compétences avancées en développement d&apos;applications, gestion de projets informatiques, et en ingénierie logicielle. Cette formation m&apos;a préparé à concevoir des solutions informatiques innovantes en utilisant des technologies récentes, tout en m&apos;adaptant aux évolutions rapides du secteur.
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}

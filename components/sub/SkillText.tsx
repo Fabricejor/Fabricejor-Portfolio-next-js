@@ -26,7 +26,7 @@ const SkillText = () => {
         variants={slideInFromRight(0.5)}
         className='cursive text-[20px] text-gray-200 mb-10 mt-[10px] text-center'
         >
-            "Les bons développeurs ne résolvent pas seulement des problèmes ; ils les anticipent." – Chris Pine
+            &quot;Les bons développeurs ne résolvent pas seulement des problèmes ; ils les anticipent.&quot; – Chris Pine
         </motion.div>
     </div>
     )
