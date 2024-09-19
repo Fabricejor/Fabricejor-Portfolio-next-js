@@ -1,13 +1,11 @@
 'use client'
 import React  , {useEffect}from 'react'
 import   {CCarousel,CCarouselItem,CImage} from '@coreui/react';
+import '@coreui/coreui/dist/css/coreui.min.css';
 
 
 export default function TestCarousel() {
-  useEffect(() => {
-    // Dynamically import CoreUI CSS when component mounts
-    import('@coreui/coreui/dist/css/coreui.min.css');
-  }, []);
+   
   return (
     <div className='w-full h-full flex justify-center'>
     <CCarousel className='max-w-[70%] z-40' controls indicators>
