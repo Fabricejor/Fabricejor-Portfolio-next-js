@@ -1,5 +1,6 @@
 "use client"
 import EveryProjects from '@/components/main/EveryProjects'
+import Footer from '@/components/main/Footer'
 import React from 'react'
 
 export default function AllProjects() {
@@ -17,6 +18,7 @@ export default function AllProjects() {
       <source src="/red fire black hole.mp4" type="video/webm" />
     </video>
     <EveryProjects/>
+    <Footer/>
   </div>
   </div>
   </main>

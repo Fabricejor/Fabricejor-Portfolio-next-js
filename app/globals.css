@@ -45,6 +45,10 @@
   border: 3px solid;
   
 }
+.Welcome-box.github:hover {
+  background: rgb(70, 70, 70);
+  
+}
 .Welcome-text:hover{
   color: #E50914;
   font-weight: 500;
