@@ -34,7 +34,7 @@ export default function EveryProjects() {
       )
     );
   };
-console.log(filteredTitleSuggestions.length);
+  console.log(filteredTitleSuggestions.length);
 
   // Fonction pour mettre à jour et filtrer les suggestions en fonction de l'entrée utilisateur pour les technologies
   const handleTechInputChange = (e) => {
@@ -46,6 +46,40 @@ console.log(filteredTitleSuggestions.length);
       )
     );
   };
+
+  // !Tableau des projets 
+  const projets = [
+    {
+      titre: 'MycodeAirlines',
+      logo: '/Logo projet 1.png',
+      description:"Projet de fin de formation fullstack javascript à Gomycode.L'objectif du projet était de développer une application web intuitive pour la réservation de billets d'avion, permettant aux utilisateurs de rechercher, comparer et réserver des vols en ligne. Réalisé dans le cadre d'une formation fullstack, le projet utilise le stack MERN. Le backend est construit avec Node.js et Express pour créer une API REST, tandis que MongoDB stocke les données sur les vols et utilisateurs. Le frontend, conçu en React.js et stylisé avec Tailwind CSS, est sécurisé grâce à JSON Web Token (JWT) pour l'authentification et la protection des données échangées.",
+      demo:"",
+      source:"https://github.com/Fabricejor/My-Code-Airlines",
+      technologies: 'Java, PHP, Typescript',
+      slides: [
+        '/shoemap.png',
+        '/NextWebsite.png',
+        '/CardImage.png'
+      ]
+    },
+    {
+      titre: 'Projet 1',
+      logo: '/word.png',
+      description:'L\'objectif du projet était de développer une application web intuitive pour la réservation de billets d\'avion, permettant aux utilisateurs de rechercher, comparer et réserver des vols en ligne. Réalisé dans le cadre d\'une formation fullstack, le projet utilise le stack MERN. Le backend est construit avec Node.js et Express pour créer une API REST, tandis que MongoDB stocke les données sur les vols et utilisateurs. Le frontend, conçu en React.js et stylisé avec Tailwind CSS, est sécurisé grâce à JSON Web Token (JWT) pour l\'authentification et la protection des données échangées.',
+      demo:"",
+      source:"",
+      technologies: 'React,MongoDB,Express,Nodejs',
+      slides: [
+        "/MyCodeAirline.png",
+        '/BondPrice.png',
+        '/CalameRedaction.png'
+      ]
+    },
+    
+    // Ajoutez autant de projets que vous voulez
+  ];
+
+
 
   return (
     <div className="flex flex-row bg-[#191717] items-center justify-center px-20 mt-20 w-full max-sm:flex-col max-sm:mb-[10%] max-sm:mt-[30vh] max-sm:px-10">
@@ -111,10 +145,21 @@ console.log(filteredTitleSuggestions.length);
         </div>
         {/* tous les card projects */}
         <div className="ALL_PROJECTS_CARD w-[100%]">
-              <CardProject/>
+          {projets.map((projet, index) => (
+            <CardProject
+              key={index}
+              titre={projet.titre}
+              logo={projet.logo}
+              description={projet.description}
+              demo={projet.demo}
+              source={projet.source}
+              technologies={projet.technologies}
+              slides={projet.slides}
+            />
+          ))}
         </div>
       </div>
-      
+
     </div>
   );
 }
