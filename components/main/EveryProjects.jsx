@@ -55,38 +55,66 @@ export default function EveryProjects() {
       description:"Projet de fin de formation fullstack javascript à Gomycode.L'objectif du projet était de développer une application web intuitive pour la réservation de billets d'avion, permettant aux utilisateurs de rechercher, comparer et réserver des vols en ligne. Réalisé dans le cadre d'une formation fullstack, le projet utilise le stack MERN. Le backend est construit avec Node.js et Express pour créer une API REST, tandis que MongoDB stocke les données sur les vols et utilisateurs. Le frontend, conçu en React.js et stylisé avec Tailwind CSS, est sécurisé grâce à JSON Web Token (JWT) pour l'authentification et la protection des données échangées.",
       demo:"",
       source:"https://github.com/Fabricejor/My-Code-Airlines",
-      technologies: 'Java, PHP, Typescript',
+      technologies: 'Javascript, MongoDB ,Express ,React js,Node js',
       slides: [
-        '/shoemap.png',
-        '/NextWebsite.png',
-        '/CardImage.png'
+        '/MyCodeAirline.png',
       ]
     },
     {
-      titre: 'Projet 1',
-      logo: '/word.png',
+      titre: 'Dev mobile',
+      logo: '/La corniche.png',
       description:'L\'objectif du projet était de développer une application web intuitive pour la réservation de billets d\'avion, permettant aux utilisateurs de rechercher, comparer et réserver des vols en ligne. Réalisé dans le cadre d\'une formation fullstack, le projet utilise le stack MERN. Le backend est construit avec Node.js et Express pour créer une API REST, tandis que MongoDB stocke les données sur les vols et utilisateurs. Le frontend, conçu en React.js et stylisé avec Tailwind CSS, est sécurisé grâce à JSON Web Token (JWT) pour l\'authentification et la protection des données échangées.',
-      demo:"",
-      source:"",
+      demo:"https://youtu.be/dtRyWmTCRv0?si=D0nHZzZ6vkEQ69zB",
+      source:"https://github.com/matthews-crypto/Gestion_hotel/tree/main/lib",
       technologies: 'React,MongoDB,Express,Nodejs',
       slides: [
-        "/MyCodeAirline.png",
-        '/BondPrice.png',
-        '/CalameRedaction.png'
       ]
     },
-    
+    {
+      titre: 'Calame Redaction',
+      logo: '/Calame red logo.png',
+      description:'L\'objectif du projet était de développer une application web intuitive pour la réservation de billets d\'avion, permettant aux utilisateurs de rechercher, comparer et réserver des vols en ligne. Réalisé dans le cadre d\'une formation fullstack, le projet utilise le stack MERN. Le backend est construit avec Node.js et Express pour créer une API REST, tandis que MongoDB stocke les données sur les vols et utilisateurs. Le frontend, conçu en React.js et stylisé avec Tailwind CSS, est sécurisé grâce à JSON Web Token (JWT) pour l\'authentification et la protection des données échangées.',
+      demo:"https://calame-redaction.infinityfreeapp.com/",
+      source:"https://github.com/Fabricejor/Calame-Redaction",
+      technologies: 'Html, Css ,Javascript,PHP',
+      slides: [
+        "/CalameRedaction.png",
+      ]
+    },
+    {
+      titre: 'Gestion-hotel-Projet-Licence',
+      logo: '/Calame red logo.png',
+      description:'L\'objectif du projet était de développer une application web intuitive pour la réservation de billets d\'avion, permettant aux utilisateurs de rechercher, comparer et réserver des vols en ligne. Réalisé dans le cadre d\'une formation fullstack, le projet utilise le stack MERN. Le backend est construit avec Node.js et Express pour créer une API REST, tandis que MongoDB stocke les données sur les vols et utilisateurs. Le frontend, conçu en React.js et stylisé avec Tailwind CSS, est sécurisé grâce à JSON Web Token (JWT) pour l\'authentification et la protection des données échangées.',
+      demo:"https://calame-redaction.infinityfreeapp.com/",
+      source:"https://github.com/Fabricejor/Gestion-des-activit-s-d-un-hotel",
+      technologies: 'Html, Css ,Javascript,PHP',
+      slides: [
+        "/CalameRedaction.png",
+      ]
+    },
+    {
+      titre: 'IONIC-Sql-Crud',
+      logo: '/Calame red logo.png',
+      description:'L\'objectif du projet était de développer une application web intuitive pour la réservation de billets d\'avion, permettant aux utilisateurs de rechercher, comparer et réserver des vols en ligne. Réalisé dans le cadre d\'une formation fullstack, le projet utilise le stack MERN. Le backend est construit avec Node.js et Express pour créer une API REST, tandis que MongoDB stocke les données sur les vols et utilisateurs. Le frontend, conçu en React.js et stylisé avec Tailwind CSS, est sécurisé grâce à JSON Web Token (JWT) pour l\'authentification et la protection des données échangées.',
+      demo:"",
+      source:"https://github.com/Fabricejor/ionic-crud-sqlite",
+      technologies: 'Typescript , Ionic',
+      slides: [
+        "/BondPrice.png",
+      ]
+    },
     // Ajoutez autant de projets que vous voulez
   ];
 
 
 
   return (
-    <div className="flex flex-row bg-[#191717] items-center justify-center px-20 mt-20 w-full max-sm:flex-col max-sm:mb-[10%] max-sm:mt-[30vh] max-sm:px-10">
-      <div className="AllProjects z-20 justify-center p-8">
-        <div className="SearchBar w-[80%] h-full">
-          <form className="Searchbar-input flex flex-row gap-4">
-            <div className="relative w-full max-w-lg">
+    <div className="flex flex-row bg-[rgb(25,23,23)]  items-center justify-center px-20 mt-20 
+    max-sm:px-2 w-full max-sm:flex-col max-sm:bg-red-500 max-sm:mb-[1vh] max-sm:mt-[20vh]">
+      <div className="AllProjects z-20 justify-center items-center p-8 max-sm:p-2">
+        <div className="SearchBar w-[80%] h-full max-sm:w-[60%]">
+          <form className="Searchbar-input flex flex-row items-center justify-center gap-4 max-sm:flex-col">
+            <div className="relative w-full max-w-lg max-sm:ml-[40%]">
               <FaSearch className="absolute right-[10%] top-[30%] text-gray-400 translate-y-[-5%]" />
               <input
                 type="text"
@@ -114,7 +142,7 @@ export default function EveryProjects() {
               )}
             </div>
 
-            <div className="relative w-full max-w-lg">
+            <div className="relative w-full max-w-lg max-sm:ml-[40%]">
               <HiCommandLine className="absolute right-[10%] top-[30%] text-gray-400 translate-y-[-5%]" />
               <input
                 type="text"
@@ -144,7 +172,7 @@ export default function EveryProjects() {
           </form>
         </div>
         {/* tous les card projects */}
-        <div className="ALL_PROJECTS_CARD w-[100%]">
+        <div className="ALL_PROJECTS_CARD w-[100%] max-sm:w-[90%]">
           {projets.map((projet, index) => (
             <CardProject
               key={index}

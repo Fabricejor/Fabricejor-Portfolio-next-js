@@ -28,9 +28,9 @@ export default function CardProject({ titre, logo,description ,demo,source, tech
 
   
   return (
-    <div className='Projet_CONTAINER mt-3 flex flex-col px-5 rounded-lg bg-gray-800  bg-opacity-90   border-8 border-slate-300 border-opacity-20 shadow-lg"'>
-      <div className='flex flex-row justify-between'>
-        <h1 className='text-white text-4xl'>{titre}</h1>
+    <div className='Projet_CONTAINER p-3 mt-3 flex flex-col px-5 rounded-lg bg-gray-800  bg-opacity-90   border-8 border-slate-300 border-opacity-20 shadow-lg"'>
+      <div className='flex flex-row justify-around mt-2 max-md:flex-col-reverse'>
+        <h1 className='text-white text-4xl dmsans '>{titre}</h1>
         <Image src={logo} className='max-w-[15%] h-auto mt-0' width={100} height={30} alt="logo" />
       </div>
       <div className='flex flex-row justify-between'>
@@ -41,6 +41,7 @@ export default function CardProject({ titre, logo,description ,demo,source, tech
           {demo.length >0 &&
         <Link
         href={demo}
+        target='_blank'
         className='Welcome-box py-[8px] px-[7px] border-[3px] bg-transparent border-[#FFffff] opacity-[0.9] 
          w-[50%]
         hover:border-[#ffbdbd] hover:bg-[#E50914]'
@@ -50,6 +51,7 @@ export default function CardProject({ titre, logo,description ,demo,source, tech
         </Link>}
         <a
         href={source}
+        target='_blank'
         className='Welcome-box github py-[8px] mt-4 px-[7px] border-[3px] bg-black border-[#ffffff] opacity-[0.9] 
         hover:border-[#353535]'
         >
@@ -63,12 +65,12 @@ export default function CardProject({ titre, logo,description ,demo,source, tech
             <p className='text-white max-w-[80%] text-wrap text-justify'>{technologies}</p>
       </div>
        {/* Bouton pour afficher/masquer le carousel */}
-       <button
+       { slides.length >0 && <button
         onClick={toggleCarousel}
         className="px-4 py-2 bg-[#CD262A] self-center max-w-[50%] text-white rounded-md mb-4 duration-150 hover:bg-[#d83937] hover:ring-4 hover:ring-white transition"
       >
         {showScreenshot ? "Hide Screenshot" : "Show Screenshot"}
-      </button>
+      </button>}
     {/* Bloc de code contenant le carousel, affiché conditionnellement */}
     {showScreenshot && (
         <div className="w-full h-full flex justify-center">
