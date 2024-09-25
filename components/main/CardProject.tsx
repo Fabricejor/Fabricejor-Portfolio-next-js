@@ -29,11 +29,11 @@ export default function CardProject({ titre, logo,description ,demo,source, tech
   
   return (
     <div className='Projet_CONTAINER p-3 mt-3 flex flex-col px-5 rounded-lg bg-gray-800  bg-opacity-90   border-8 border-slate-300 border-opacity-20 shadow-lg"'>
-      <div className='flex flex-row justify-around mt-2 max-md:flex-col-reverse'>
+      <div className='flex flex-row justify-around items-center mt-2 max-md:flex-col-reverse'>
         <h1 className='text-white text-4xl dmsans '>{titre}</h1>
         <Image src={logo} className='max-w-[15%] h-auto mt-0' width={100} height={30} alt="logo" />
       </div>
-      <div className='flex flex-row justify-between'>
+      <div className='flex flex-row items-center justify-between'>
         <div className='paragraphe_CONTAINER ml-10'>
             <p className='text-white max-w-[80%] text-wrap text-justify'>{description}</p>
         </div>

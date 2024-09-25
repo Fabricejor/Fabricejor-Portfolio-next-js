@@ -33,8 +33,8 @@ export default function TestCarousel({slides}: Props) {
           transform: `translateX(-${current * 100}%)`,
         }}
       >
-        {slides.map((s:any) => {
-          return <img src={s}  alt="..."/>;
+        {slides.map((s:any , i:any) => {
+          return <img src={s}  key={i} alt="..."/>;
         })}
       </div>
 
