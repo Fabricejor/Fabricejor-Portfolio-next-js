@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   openGraph:{
     url: 'https://fabricejor-dev-portfolio.vercel.app',
     title:'Mon Portfolio Fabricejor next js',
+    siteName:'Fabricejor dev portfolio',
     type:'profile',
     description:'Ici vous trouverez toutes les informations professionelles me concernants',
     images:[
