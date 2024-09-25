@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title:'Mon Portfolio Fabricejor next js',
     type:'profile',
     description:'Ici vous trouverez toutes les informations professionelles me concernants',
-    images:[{ url:'https://raw.githubusercontent.com/Fabricejor/Fabricejor-Portfolio-next-js/refs/heads/main/public/apercu.png'}],
+    images:['https://raw.githubusercontent.com/Fabricejor/Fabricejor-Portfolio-next-js/refs/heads/main/public/apercu.png'],
     emails:'Fabricejordan2001@gmail.com'
   },
   twitter: {
