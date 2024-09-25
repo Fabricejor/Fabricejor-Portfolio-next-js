@@ -9,7 +9,24 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Fabricejor Portfolio",
   description: "Je vous Présente Mon Portfolio Fabricejor Réalisé avec Next.js 14 ce site web vous présente mon profil , mon travail et tous mes projets entrepris en tant que dévelloppeur Full-stack.Développeur Full Stack passionné par le numérique et les nouvelles technologies, j'ai une solide expérience en développement web et mobile. Toujours à l'affût de nouveaux défis, je cherche sans cesse à perfectionner mes compétences techniques. Mon objectif est de contribuer activement à la réussite de vos projets.",
-  keywords: 'Fabricejor , FabricejorDev , Portofolio , Next.js',
+  keywords:['Next.js', 'React', 'JavaScript','Fabricejor','Fabricejor dev', 'Portofio','Fabricejor portfolio'],
+  authors:[{name:'Fabricejor'},{name:'Fabricejor Dev'},{name:'Fabrice jordan Ramos Dev'}],
+  creator: 'Jordan Ramos',
+  publisher: 'Jordan Ramos',
+  alternates: {canonical:'/'},
+  openGraph:{
+    title:'Mon Portfolio Fabricejor next js',
+    type:'profile',
+    description:'Ici vous trouverez toutes les informations professionelles me concernants',
+    images:'/apercu.png',
+    emails:'Fabricejordan2001@gmail.com'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fabricejor - Mon portfolio',
+    description:'Ici vous trouverez toutes les informations professionelles me concernants',
+    images: '/apercu.png',
+  },
 };
 
 export default function RootLayout({
