@@ -129,10 +129,10 @@ const filteredProjects = projets.filter((projet) =>
 );
 
   return (
-    <div className="flex flex-row bg-[rgb(25,23,23)]  items-center justify-center px-20 mt-20 
-    max-sm:px-2 w-full max-sm:flex-col max-sm:bg-red-500 max-sm:mb-[1vh] max-sm:mt-[20vh]">
-      <div className="AllProjects z-20 justify-center items-center p-8 max-sm:p-2">
-        <div className="SearchBar w-[100%] h-full max-sm:w-[60%]">
+    <div className=" flex flex-row bg-[rgb(25,23,23)]  items-center justify-center px-20 mt-20 
+    max-sm:px-2 w-full max-sm:flex-row max-sm:mb-[1vh] max-sm:mt-[20vh]">
+      <div className="AllProjects  z-20 justify-center items-center p-8 max-sm:p-2">
+        <div className="SearchBar w-[100%] h-full max-sm:w-[70%]">
           <form className="Searchbar-input flex flex-row items-center justify-center gap-4 max-sm:flex-col">
             <div className="relative w-full max-w-lg max-sm:ml-[40%]">
               <FaSearch className="absolute right-[10%] top-[30%] text-gray-400 translate-y-[-5%]" />
@@ -164,7 +164,7 @@ const filteredProjects = projets.filter((projet) =>
           </form>
         </div>
         {/* tous les card projects */}
-        <div className="ALL_PROJECTS_CARD w-[100%] max-sm:w-[90%]">
+        <div className="ALL_PROJECTS_CARD w-[100%] flex flex-col items-center mt-0 justify-center max-sm:w-[100%]">
           {filteredProjects.map((projet, index) => (
             <CardProject
               key={index}

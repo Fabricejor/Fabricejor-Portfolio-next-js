@@ -49,8 +49,8 @@ const Navbar = () => {
 
         {/* Links for Desktop */}
         <div className="hidden md:flex flex-row items-center justify-between w-[500px] h-auto border border-[#00B1A8] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-          <a href="#skills" className="cursor-pointer">Skills</a>
-          <a href="#projects" className="cursor-pointer">Projects</a>
+          <a href="/" className="cursor-pointer">Home</a>
+          <a href="/AllProjects" className="cursor-pointer">Projects</a>
           <a href="#Contact-me" className="cursor-pointer">Contact</a>
         </div>
 
@@ -73,8 +73,8 @@ const Navbar = () => {
       {/* Mobile Links (Burger Menu) */}
       {navOpen && (
         <div className="md:hidden flex flex-col items-center bg-[#0300145e] border border-[#00B1A8] px-[20px] py-[10px] rounded-lg mt-2">
-          <a href="#skills" className="py-2 text-gray-200 cursor-pointer">Skills</a>
-          <a href="#projects" className="py-2 text-gray-200 cursor-pointer">Projects</a>
+          <a href="/" className="py-2 text-gray-200 cursor-pointer">Home</a>
+          <a href="/AllProjects" className="py-2 text-gray-200 cursor-pointer">Projects</a>
           <a href="#Contact-me" className="py-2 text-gray-200 cursor-pointer">Contact</a>
         </div>
       )}

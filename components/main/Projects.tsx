@@ -16,6 +16,7 @@ const Projects = () => {
       </h1>
       <Link 
       href={"/AllProjects"}
+      target="_blank"
          className="py-2 z-30 cursor-pointer px-2 button-primary text-center text-white rounded-lg max-w-[100%] mb-10 mt-[-30px]"
       >
         Tous mes projects

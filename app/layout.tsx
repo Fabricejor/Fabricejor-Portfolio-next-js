@@ -8,7 +8,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Fabricejor Portfolio",
-  description: "Fabricejor fullstack dev js Portfolio",
+  description: "Je vous Présente Mon Portfolio Fabricejor Réalisé avec Next.js 14 ce site web vous présente mon profil , mon travail et tous mes projets entrepris en tant que dévelloppeur Full-stack.Développeur Full Stack passionné par le numérique et les nouvelles technologies, j'ai une solide expérience en développement web et mobile. Toujours à l'affût de nouveaux défis, je cherche sans cesse à perfectionner mes compétences techniques. Mon objectif est de contribuer activement à la réussite de vos projets.",
+  keywords: 'Fabricejor , FabricejorDev , Portofolio , Next.js',
 };
 
 export default function RootLayout({
