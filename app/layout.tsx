@@ -28,6 +28,16 @@ export const metadata: Metadata = {
     ],
     emails:'Fabricejordan2001@gmail.com'
   },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+    },
+  },
   twitter: {
     card: 'summary_large_image',
     title: 'Fabricejor - Mon portfolio',
