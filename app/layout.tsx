@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     title:'Mon Portfolio Fabricejor next js',
     type:'profile',
     description:'Ici vous trouverez toutes les informations professionelles me concernants',
-    images:'/apercu.png',
+    images:'https://fabricejor-dev-portfolio.vercel.app/_next/image?url=%2Fapercu.png&w=384&q=75',
     emails:'Fabricejordan2001@gmail.com'
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Fabricejor - Mon portfolio',
     description:'Ici vous trouverez toutes les informations professionelles me concernants',
-    images: '/apercu.png',
+    images: 'https://fabricejor-dev-portfolio.vercel.app/_next/image?url=%2Fapercu.png&w=384&q=75',
   },
 };
 
