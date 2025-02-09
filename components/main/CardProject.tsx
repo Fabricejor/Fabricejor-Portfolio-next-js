@@ -119,4 +119,7 @@ const CardProject = memo(({ titre, logo, description, demo, source, technologies
   );
 });
 
+// Ajout du displayName
+CardProject.displayName = 'CardProject';
+
 export default CardProject;

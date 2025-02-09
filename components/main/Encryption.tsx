@@ -121,5 +121,7 @@ const Encryption = memo(() => {
     </div>
   );
 });
+// Ajout du displayName
+Encryption.displayName = 'Encryption';
 
 export default Encryption;

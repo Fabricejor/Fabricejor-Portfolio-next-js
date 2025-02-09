@@ -182,4 +182,7 @@ const EveryProjects = memo(() => {
   );
 });
 
+// Ajout du displayName
+EveryProjects.displayName = 'EveryProjects';
+
 export default EveryProjects;
