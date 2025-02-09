@@ -61,7 +61,7 @@ export const Skill_data = [
     },
     {
       skill_name: "Bootstrap",
-      Image: "/Bootstrap.png",
+      Image: "/bootstrap.svg",
       width: 55,
       height: 55,
     },
