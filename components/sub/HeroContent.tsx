@@ -1,32 +1,32 @@
 "use client"
 import React from 'react'
-import { useState } from 'react';
 import {motion} from 'framer-motion'
 import { slideInFromLeft, slideInFromTop ,slideInFromRight } from '@/utils/motion'
 import { SparklesIcon } from "@heroicons/react/24/solid"
 import Image from "next/image";
 import Link from 'next/link';
 
-
-//https://diploma.gomycode.app/?id=31716817358394535 link a utiliser pour plus tard
+// Lien de référence : https://diploma.gomycode.app/?id=31716817358394535
 const HeroContent = () => {
-  const [imageSrc, setImageSrc] = useState('/photoprofilIA.jpeg');
+  // Image statique (aucune modification au survol étant pour l'instant désactivée)
+  const imageSrc = '/photoprofilIA.jpeg';
 
   return (
     <motion.div
-    initial='hidden'
-    animate='visible'
-    className='flex flex-row items-center justify-center px-20 mt-28 w-full z-[20] max-sm:flex-col max-sm:mb-[10%] max-sm:mt-[30vh] max-sm:px-10'>
+      initial='hidden'
+      animate='visible'
+      className='flex flex-row items-center justify-center px-20 mt-28 w-full z-[20] max-sm:flex-col max-sm:mb-[10%] max-sm:mt-[30vh] max-sm:px-10'
+    >
       <div className='h-full w-full flex flex-col gap-5 justify center m-auto text-start'>
         <motion.a
-        variants={slideInFromTop}
-        href='https://diploma.gomycode.app/?id=31716817358394535 '
-        className='Welcome-box py-[8px] px-[7px] border border-[#00B1A8] opacity-[0.9] 
-        max-sm:border-[#5be6dc]
-        hover:border-[#E50914]'
+          variants={slideInFromTop}
+          href='https://diploma.gomycode.app/?id=31716817358394535'
+          className='Welcome-box py-[8px] px-[7px] border border-[#00B1A8] opacity-[0.9] 
+          max-sm:border-[#5be6dc]
+          hover:border-[#E50914]'
         >
-            <SparklesIcon className="text-[#5be6dc] mr-[10px] h-5 w-5 "/>
-            <h1 className='Welcome-text text-[13px] max-sm:text-[10px] '>My Fullstack js Certification</h1>
+          <SparklesIcon className="text-[#5be6dc] mr-[10px] h-5 w-5" />
+          <h1 className='Welcome-text text-[13px] max-sm:text-[10px]'>My Fullstack js Certification</h1>
         </motion.a>
         <motion.div
           variants={slideInFromLeft(0.5)}
@@ -52,21 +52,20 @@ const HeroContent = () => {
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
           href='#skills'
         >
-         {/* <Link href="#skills"> Voir plus!</Link> */}
-         <span  title='mes skills'>voir plus</span>
+          {/* <Link href="#skills"> Voir plus!</Link> */}
+          <span title='mes skills'>voir plus</span>
         </motion.a>
       </div>
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center  max-sm:mt-8  max-sm:w-[250px]"
+        className="w-full h-full flex justify-center items-center max-sm:mt-8 max-sm:w-[250px]"
       >
         <Image
           src={imageSrc}
           alt="profile"
           height={350}
           width={350}
-          // onMouseEnter={() => setImageSrc('/PhotoProfil.png')}
-          // onMouseLeave={() => setImageSrc('/PhotoProfil.png')}
+          priority
           className='rounded-[40%] filter grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-1000'
         />
       </motion.div>
@@ -74,4 +73,4 @@ const HeroContent = () => {
   )
 }
 
-export default HeroContent
+export default React.memo(HeroContent)

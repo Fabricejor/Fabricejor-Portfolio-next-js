@@ -1,11 +1,16 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useMemo, memo } from "react";
 import { HiCommandLine } from "react-icons/hi2";
 import { FaSearch } from "react-icons/fa";
-import CardProject from "./CardProject";
+import dynamic from 'next/dynamic';
+
+// Import dynamique de CardProject
+const CardProject = dynamic(() => import("./CardProject"), {
+  loading: () => <div className="text-white text-center">Loading project...</div>
+});
 
 // Liste de mots-clés pour les suggestions
-const projectKeywords = [
+const projectKeywords = memo([
   "Java",
   "Javascript",
   "Python",
@@ -16,18 +21,14 @@ const projectKeywords = [
   "CSS",
   "Tailwind",
   "PHP",
-];
+]);
 
-export default function EveryProjects() {
+const EveryProjects = memo(() => {
   const [titleQuery, setTitleQuery] = useState("");
-  const [techQuery, setTechQuery] = useState("");
   const [filteredTitleSuggestions, setFilteredTitleSuggestions] = useState([]);
-  const [filteredTechSuggestions, setFilteredTechSuggestions] = useState([]);
-
- 
 
   // !Tableau des projets 
-  const projets = [
+  const projets = useMemo(() => [
     {
       titre: 'MycodeAirlines',
       logo: '/Logo projet 1.png',
@@ -88,7 +89,7 @@ export default function EveryProjects() {
     {
       titre: 'BondPricer',
       logo: '/AIP.png',
-      description:'J\'ai développé une application web permettant de collecter des informations clients avant de leur donner un accès unique à des fichiers à télécharger. Les administrateurs peuvent générer un code d\’accès pour chaque client, qui est utilisable une seule fois. Les utilisateurs ont cinq minutes pour remplir un formulaire et accéder aux fichiers mis à disposition. L\’application est conçue pour vendre des fichiers téléchargeables une seule fois, ce qui évite leur duplication, notamment pour des logiciels spécifiques comme des fichiers Excel auto-installables. Pour renforcer la sécurité, j\’ai mis en place plusieurs niveaux de protection contre les attaques XSS (cross-site scripting), étant donné la présence de champs de texte dans le formulaire, le tout implémenté avec PHP.Nb: La démo ne montre pas les données manipulées lors de la conception pour des soucis de confidentialité',
+      description:'J\'ai développé une application web permettant de collecter des informations clients avant de leur donner un accès unique à des fichiers à télécharger. Les administrateurs peuvent générer un code d\'accès pour chaque client, qui est utilisable une seule fois. Les utilisateurs ont cinq minutes pour remplir un formulaire et accéder aux fichiers mis à disposition. L\'application est conçue pour vendre des fichiers téléchargeables une seule fois, ce qui évite leur duplication, notamment pour des logiciels spécifiques comme des fichiers Excel auto-installables. Pour renforcer la sécurité, j\'ai mis en place plusieurs niveaux de protection contre les attaques XSS (cross-site scripting), étant donné la présence de champs de texte dans le formulaire, le tout implémenté avec PHP.Nb: La démo ne montre pas les données manipulées lors de la conception pour des soucis de confidentialité',
       demo:"https://files.fm/u/uhgbck8jvd",
       source:"https://github.com/Fabricejor/BondPricer-Pro",
       technologies: 'HTML,JAVASCRIPT,CSS, PHP',
@@ -99,39 +100,45 @@ export default function EveryProjects() {
       ]
     },
     // Ajoutez autant de projets que vous voulez
-  ];
-  const projectTitles = projets.map(projet => projet.titre);
- // Fonction pour mettre à jour et filtrer les suggestions en fonction de l'entrée utilisateur pour les titres
+  ], []); // Mémorisation du tableau des projets
+
+  // Mémorisation des titres de projets
+  const projectTitles = useMemo(() => projets.map(projet => projet.titre), [projets]);
+
+  // Mémorisation des styles communs
+  const styles = useMemo(() => ({
+    container: "flex flex-row bg-[rgb(25,23,23)] items-center justify-center px-20 mt-20 max-sm:px-2 w-full max-sm:flex-row max-sm:mb-[1vh] max-sm:mt-[20vh]",
+    searchInput: "w-full max-w-lg pl-10 pr-4 py-2 bg-gray-800 bg-opacity-50 focus:bg-opacity-90 text-white rounded-lg border-2 border-gray-300 border-opacity-20 focus:outline-none focus:ring-4 focus:ring-slate-500 shadow-lg",
+    suggestionsList: "absolute bg-gray-700 bg-opacity-90 text-white w-full mt-1 rounded-lg shadow-lg max-h-40 overflow-y-auto",
+    suggestionItem: "px-4 py-2 cursor-pointer hover:bg-gray-600"
+  }), []);
+
+  // Optimisation de la fonction de filtrage des titres
   const handleTitleInputChange = (e) => {
     const value = e.target.value;
     setTitleQuery(value);
+    if (!value.trim()) {
+      setFilteredTitleSuggestions([]);
+      return;
+    }
     setFilteredTitleSuggestions(
       projectTitles.filter((keyword) =>
         keyword.toLowerCase().startsWith(value.toLowerCase())
       )
     );
   };
-  console.log(filteredTitleSuggestions.length);
 
-  // Fonction pour mettre à jour et filtrer les suggestions en fonction de l'entrée utilisateur pour les technologies
-  const handleTechInputChange = (e) => {
-    const value = e.target.value;
-    setTechQuery(value);
-    setFilteredTechSuggestions(
-      projectKeywords.filter((keyword) =>
-        keyword.toLowerCase().startsWith(value.toLowerCase())
-      )
+  // Mémorisation des projets filtrés
+  const filteredProjects = useMemo(() => {
+    if (!titleQuery) return projets;
+    return projets.filter((projet) =>
+      projet.titre.toLowerCase().includes(titleQuery.toLowerCase())
     );
-  };
-// Filtrer les projets dont le titre correspond à la requête de recherche
-const filteredProjects = projets.filter((projet) =>
-  projet.titre.toLowerCase().includes(titleQuery.toLowerCase())
-);
+  }, [projets, titleQuery]);
 
   return (
-    <div className=" flex flex-row bg-[rgb(25,23,23)]  items-center justify-center px-20 mt-20 
-    max-sm:px-2 w-full max-sm:flex-row max-sm:mb-[1vh] max-sm:mt-[20vh]">
-      <div className="AllProjects  z-20 justify-center items-center p-8 max-sm:p-2">
+    <div className={styles.container}>
+      <div className="AllProjects z-20 justify-center items-center p-8 max-sm:p-2">
         <div className="SearchBar w-[100%] h-full max-sm:w-[70%]">
           <form className="Searchbar-input flex flex-row items-center justify-center gap-4 max-sm:flex-col">
             <div className="relative w-full max-w-lg max-sm:ml-[40%]">
@@ -141,15 +148,14 @@ const filteredProjects = projets.filter((projet) =>
                 placeholder="Search by Title"
                 value={titleQuery}
                 onChange={handleTitleInputChange}
-                className="w-full max-w-lg pl-10 pr-4 py-2 bg-gray-800 bg-opacity-50 focus:bg-opacity-90 text-white rounded-lg border-2 border-gray-300 border-opacity-20 focus:outline-none focus:ring-4 focus:ring-slate-500 shadow-lg"
+                className={styles.searchInput}
               />
-              {/* Suggestions de titre */}
               {filteredTitleSuggestions.length > 0 && (
-                <ul className="absolute bg-gray-700 bg-opacity-90 text-white w-full mt-1 rounded-lg shadow-lg max-h-40 overflow-y-auto">
+                <ul className={styles.suggestionsList}>
                   {filteredTitleSuggestions.map((suggestion, index) => (
                     <li
                       key={index}
-                      className="px-4 py-2 cursor-pointer hover:bg-gray-600"
+                      className={styles.suggestionItem}
                       onClick={() => {
                         setTitleQuery(suggestion);
                         setFilteredTitleSuggestions([]);
@@ -163,23 +169,17 @@ const filteredProjects = projets.filter((projet) =>
             </div>
           </form>
         </div>
-        {/* tous les card projects */}
         <div className="ALL_PROJECTS_CARD w-[100%] flex flex-col items-center mt-0 justify-center max-sm:w-[100%]">
           {filteredProjects.map((projet, index) => (
             <CardProject
-              key={index}
-              titre={projet.titre}
-              logo={projet.logo}
-              description={projet.description}
-              demo={projet.demo}
-              source={projet.source}
-              technologies={projet.technologies}
-              slides={projet.slides}
+              key={projet.titre}
+              {...projet}
             />
           ))}
         </div>
       </div>
-
     </div>
   );
-}
+});
+
+export default EveryProjects;

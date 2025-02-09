@@ -13,8 +13,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center gap-3 h-full relative mt-[10%] Z-30 pb-80 py-20 max-sm:mt-[70vh]"
-      style={{ transform: "scale(0.9" }}
+      className="scale-90 flex flex-col items-center justify-center gap-3 h-full relative mt-[10%] z-30 pb-80 py-20 max-sm:mt-[70vh]"
     >
       <SkillText />
 
@@ -87,7 +86,7 @@ const Skills = () => {
         <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
           <video
             className="w-full h-auto"
-            preload="false"
+            preload="none"
             playsInline
             loop
             muted
@@ -100,4 +99,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default React.memo(Skills);

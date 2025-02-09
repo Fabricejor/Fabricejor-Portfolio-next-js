@@ -2,22 +2,24 @@
 import React from "react";
 import ProjectCard from "../sub/ProjectCard";
 import Link from "next/link";
-import { CardBody } from "../ui/3d-card";
-
 
 const Projects = () => {
   return (
-    <div
-      className="flex flex-col items-center justify-center  py-0 mt-32 max-sm:mt-[70vh]"
+    <section
       id="projects"
+      role="region"
+      aria-label="Mes projets"
+      className="flex flex-col items-center justify-center py-0 mt-32 max-sm:mt-[70vh]"
     >
       <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-300 py-20">
         Mes Projects 
       </h1>
       <Link 
-      href={"/AllProjects"}
-      target="_blank"
-         className="py-2 z-30 cursor-pointer px-2 button-primary text-center text-white rounded-lg max-w-[100%] mb-10 mt-[-30px]"
+         href={"/AllProjects"}
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Voir tous mes projets"
+         className="py-2 z-30 cursor-pointer px-2 button-primary text-center text-white rounded-lg max-w-full mb-10 -mt-8"
       >
         Tous mes projects
       </Link>
@@ -28,7 +30,6 @@ const Projects = () => {
           description="Création d'un site vitrine pour promouvoir les services de l'entreprise, utilisant HTML, CSS, et JavaScript. Un système d'e-mails automatiques a été intégré avec PHP."
           demo="https://calame-redaction.infinityfreeapp.com/"
           source="https://github.com/Fabricejor/Calame-Redaction"
-          
         />
         <ProjectCard
           src="/Bondprice.png"
@@ -45,8 +46,8 @@ const Projects = () => {
           source="https://github.com/Fabricejor/My-Code-Airlines"
         />
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Projects;
+export default React.memo(Projects);
