@@ -124,7 +124,7 @@ export const Skill_data = [
     },
     {
       skill_name: "Canva",
-      Image: "/Canva.svg",
+      Image: "/canva-app.svg",
       width: 50,
       height: 50,
     },
@@ -160,7 +160,7 @@ export const Skill_data = [
     },
     {
       skill_name: "Bitbucket",
-      Image: "/Bitbucket.svg",
+      Image: "/bitbuckets.svg",
       width: 50,
       height: 50,
     },
