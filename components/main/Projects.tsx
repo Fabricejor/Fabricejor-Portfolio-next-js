@@ -32,7 +32,7 @@ const Projects = () => {
           source="https://github.com/Fabricejor/Calame-Redaction"
         />
         <ProjectCard
-          src="/Bondprice.png"
+          src="/BondPrice.png"
           title="BondPrice - Plateforme de Téléchargement"
           description="Développement d'une application web sécurisée pour Bondprice Tool, avec une interface administrateur pour gérer les utilisateurs. Utilisation de HTML, CSS, JS, et PHP pour la sécurité et l'intégration de données CSV."
           demo="https://bondpricer.000webhostapp.com"
