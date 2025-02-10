@@ -125,8 +125,8 @@ export const Skill_data = [
     {
       skill_name: "Canva",
       Image: "/Canva.svg",
-      width: 60,
-      height: 60,
+      width: 50,
+      height: 50,
     },
     {
       skill_name: "Material UI",
@@ -147,20 +147,20 @@ export const Skill_data = [
       height: 60,
     },
     {
-      skill_name: "Xampp",
-      Image: "/Xampp_.png",
+      skill_name: "Python",
+      Image: "/python.svg",
       width: 50,
       height: 50,
     },
     {
       skill_name: "Git",
-      Image: "/git.png",
+      Image: "/git.svg",
       width: 50,
       height: 50,
     },
     {
       skill_name: "Bitbucket",
-      Image: "/Bitbucket.png",
+      Image: "/Bitbucket.svg",
       width: 50,
       height: 50,
     },
@@ -175,31 +175,31 @@ export const Skill_data = [
     },
     {
       skill_name: "Express js",
-      Image: "/express.png",
+      Image: "/expressjs.svg",
       width: 50,
       height: 50,
     },
     {
       skill_name: "Mongo db",
-      Image: "/mongodb.png",
+      Image: "/mongodb.svg",
       width: 40,
       height: 40,
     },
     {
       skill_name: "Linux",
-      Image: "/Linux.png",
+      Image: "/linux.svg",
       width: 60,
       height: 60,
     },
     {
       skill_name: "PHP",
-      Image: "/php.png",
+      Image: "/php.svg",
       width: 60,
       height: 60,
     },
     {
       skill_name: "My SQL",
-      Image: "/mysql.png",
+      Image: "/mysql.svg",
       width: 50,
       height: 50,
     },
@@ -211,7 +211,7 @@ export const Skill_data = [
     },
     {
       skill_name: "Figma",
-      Image: "/figma.png",
+      Image: "/figma.svg",
       width: 35,
       height: 35,
     },
@@ -219,23 +219,25 @@ export const Skill_data = [
   
   export const Full_stack = [
     {
-      skill_name: "Word",
-      Image: "/word.png",
+      skill_name: "Branchement d'application lié à l'ia ",
+      Image: "/artificial-intellegence.svg",
       width: 60,
       height: 60,
     },   
     {
-      skill_name: "Excel",
-      Image: "/Excel.png",
+      skill_name: "Tous les outils de microsoft office",
+      Image: "/microsoft-office.svg",
       width: 60,
       height: 60,
     },
+
     {
-      skill_name: "PowerPoint",
-      Image: "/PowerPoint.png",
+      skill_name: "Django rest framework",
+      Image: "/django.svg",
       width:60,
       height: 60,
     },
+
     
   
   ];
