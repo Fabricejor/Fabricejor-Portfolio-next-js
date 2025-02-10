@@ -1,55 +1,58 @@
 export const Skill_data = [
     {
       skill_name: "Html 5",
-      Image: "/html.png",
+      Image: "/html.svg",
       width: 50,
       height: 50,
     },
     {
       skill_name: "Css",
-      Image: "/css.png",
+      Image: "/css.svg",
       width: 50,
       height: 50,
     },
     {
       skill_name: "Java Script",
-      Image: "/js.png",
+      Image: "/javascript.svg",
       width: 50,
       height: 50,
+
     },
     {
       skill_name: "Tailwind Css",
-      Image: "/tailwind.png",
+      Image: "/tailwind-css.svg",
       width: 50,
       height: 50,
     },
     {
       skill_name: "React",
-      Image: "/react.png",
+      Image: "/react js.svg",
       width: 50,
       height: 50,
     },
     {
       skill_name: "Redux",
-      Image: "/redux.png",
+      Image: "/redux.svg",
       width: 50,
       height: 50,
     },
     {
-      skill_name: "React Query",
-      Image: "/reactquery.png",
+      skill_name: "SUPABASE",
+      Image: "/supabase.svg",
       width: 50,
       height: 50,
     },
+
     {
-      skill_name: "Type Script",
-      Image: "/ts.png",
+      skill_name: "Typescript",
+      Image: "/typescript.svg",
       width: 50,
       height: 50,
     },
+
     {
       skill_name: "Next js 13",
-      Image: "/next.png",
+      Image: "/nextjs.svg",
       width: 50,
       height: 50,
     },
@@ -67,15 +70,15 @@ export const Skill_data = [
     },
     {
       skill_name: "Node js",
-      Image: "/node-js.png",
-      width: 50,
-      height: 50,
+      Image: "/node-js.svg",
+      width: 75,
+      height: 75,
     },
     {
       skill_name: "Mongo db",
-      Image: "/mongodb.png",
-      width: 35,
-      height: 35,
+      Image: "/mongodb.svg",
+      width: 55,
+      height: 55,
     },
   
   ];
@@ -103,25 +106,25 @@ export const Skill_data = [
   export const Frontend_skill = [
     {
       skill_name: "Flutter",
-      Image: "/Flutter.png",
+      Image: "/flutter.svg",
       width: 50,
       height: 50,
     },
     {
       skill_name: "Langage C",
-      Image: "/Langage C.png",
+      Image: "/c.svg",
       width: 50,
       height: 50,
     },
     {
       skill_name: "Java",
-      Image: "/java.png",
+      Image: "/java.svg",
       width: 60,
       height: 60,
     },
     {
       skill_name: "Canva",
-      Image: "/Canva.png",
+      Image: "/Canva.svg",
       width: 60,
       height: 60,
     },
