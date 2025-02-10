@@ -54,7 +54,7 @@ const Encryption = memo(() => {
         </motion.div>
       </div>
       {/* les diplomes */} 
-      <div className="w-full flex flex-col items-center mt-[25%] px-9 max-sm:px-0 max-sm:mt-[850px]">
+      <div className="w-full flex flex-col items-center mt-[9%] px-9 max-sm:px-0 max-sm:mt-[150px]">
       {/* ? premier diplome */}
       {formations.map((formation, index) => (
         <motion.div

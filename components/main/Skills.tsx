@@ -13,7 +13,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="scale-90 flex flex-col items-center justify-center gap-3 h-full relative mt-[10%] z-30 pb-80 py-20 max-sm:mt-[70vh]"
+      className="scale-90 flex flex-col items-center justify-center gap-3 h-full relative mt-[1vh] z-30 pb-80 py-20 max-sm:mt-[12vh]"
     >
       <SkillText />
 
