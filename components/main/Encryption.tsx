@@ -38,7 +38,7 @@ const Encryption = memo(() => {
     title: formation.period,
     content: (
       <div className="flex flex-col md:flex-col-reverse items-start md:items-center gap-4">
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 max-sm:self-center">
           <Image
             src={formation.image}
             alt={formation.title}
@@ -48,8 +48,8 @@ const Encryption = memo(() => {
             loading="lazy"
           />
         </div>
-        <div className="text-left">
-          <h3 className="text-xl font-bold text-white mb-1">{formation.title}</h3>
+        <div className="text-left max-sm:text-center">
+          <h3 className="text-xl font-bold text-white mb-1 max-md:text-justify ">{formation.title}</h3>
           <p className="text-gray-300 my-2 text-justify">{formation.description}</p>
           <a
             href={formation.link}
