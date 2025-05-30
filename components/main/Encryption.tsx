@@ -1,19 +1,14 @@
 "use client";
 import React, { memo, useMemo } from "react";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
-import { slideInFromLeft, slideInFromTop, slideInFromRight } from '@/utils/motion'
-
+import { motion } from "framer-motion";
+import { slideInFromTop } from '@/utils/motion';
+import { Timeline } from "@/components/ui/timeline";
 
 const Encryption = memo(() => {
   // Mémorisation des variants d'animation
   const variants = useMemo(() => ({
     top: slideInFromTop,
-    left: slideInFromLeft(0.5),
-    leftSlow: slideInFromLeft(0.8),
-    leftSlower: slideInFromLeft(1),
-    right: slideInFromRight(0.8)
   }), []);
 
   // Mémorisation des données de formation
@@ -38,11 +33,45 @@ const Encryption = memo(() => {
     }
   ], []);
 
+  // Transformer les données de formations pour le composant Timeline
+  const timelineData = useMemo(() => formations.map(formation => ({
+    title: formation.period,
+    content: (
+      <div className="flex flex-col md:flex-col-reverse items-start md:items-center gap-4">
+        <div className="flex-shrink-0">
+          <Image
+            src={formation.image}
+            alt={formation.title}
+            width={150}
+            height={150}
+            className={`${formation.imageClass} filter grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-1000`}
+            loading="lazy"
+          />
+        </div>
+        <div className="text-left">
+          <h3 className="text-xl font-bold text-white mb-1">{formation.title}</h3>
+          <p className="text-gray-300 my-2 text-justify">{formation.description}</p>
+          <a
+            href={formation.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="z-10 p-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-max inline-block hover:cursor-pointer"
+            title={`Lien vers ${formation.linkText}`}
+          >
+            {formation.linkText}
+          </a>
+        </div>
+      </div>
+    )
+  })), [formations]);
+
   return (
-    <div className="flex flex-row relative items-center justify-center min-h-screen w-full h-full">
-      <div className="absolute w-auto h-auto top-0 z-[5]">
+    <div className="flex flex-col relative items-center justify-center min-h-screen w-full h-full pt-20 md:pt-0">
+      <div className="absolute w-auto h-auto top-10 md:top-20 z-[5]">
         <motion.div
           variants={variants.top}
+          initial="hidden"
+          animate="visible"
           className="text-[40px] font-medium text-center text-gray-200"
         >
           Formations
@@ -53,68 +82,18 @@ const Encryption = memo(() => {
           Diplômes
         </motion.div>
       </div>
-      {/* les diplomes */} 
-      <div className="w-full flex flex-col items-center mt-[9%] px-9 max-sm:px-0 max-sm:mt-[150px]">
-      {/* ? premier diplome */}
-      {formations.map((formation, index) => (
-        <motion.div
-          key={formation.title}
-          animate='visible'
-          className='flex flex-row items-center justify-center px-20 mt-0 w-full z-[20] max-sm:flex-col max-sm:px-8 max-sm:mt-[0px]'
-        >
-          <div className='h-full w-full flex flex-col justify center m-auto text-start'>
-            <motion.div
-              variants={variants.left}
-              className="flex flex-col mt-6 font-bold text-white max-w-[500px] w-auto"
-            >
-              <span className="TitredelaFormation text-justify text-2xl">
-                {formation.title}
-              </span>
-              <span className="text-gray-400 text-1x1 italic">
-                {formation.period}
-              </span>
-            </motion.div>
-            <motion.p
-              variants={variants.leftSlow}
-              className="text-1x1 text-gray-200 my-5 max-w-[600px] text-justify"
-            >
-              {formation.description}
-            </motion.p>
-            <motion.a
-              variants={variants.leftSlower}
-              className="p-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-max"
-              href={formation.link}
-              target="_Blank"
-              title='Ma certfication'
-            >
-              <span>{formation.linkText}</span>
-            </motion.a>
-          </div>
-          <motion.div
-            variants={variants.right}
-            className="w-full h-full flex justify-center items-center max-sm:mt-8 max-sm:w-[150px]"
-          >
-            <Image
-              src={formation.image}
-              alt="profile"
-              height={150}
-              width={150}
-              className={`${formation.imageClass} filter grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-1000`}
-              loading="lazy"
-            />
-          </motion.div>
-        </motion.div>
-      ))}
-      </div>
-      {/* video */}
-      <div className="w-full h-full flex items-start justify-center absolute max-sm:hidden">
+
+      <Timeline data={timelineData} />
+
+      {/* video background - consider if this is still needed or how it fits with Timeline */}
+      <div className="w-full min-h-screen h-screen flex items-start justify-center absolute -z-10 top-0 max-sm:hidden">
         <video
           loop
           muted
           autoPlay
           playsInline
           preload="none"
-          className="w-full h-auto"
+          className="w-full h-auto opacity-30"
           src="/Loading b.mp4"
         />
       </div>

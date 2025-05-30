@@ -1,52 +1,28 @@
 "use client"
 
 import React from 'react'
-import {motion} from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 import Image from 'next/image';
-
 
 interface Props {
     src: string;
     width: number;
     height: number;
-    index: number;
-    title:string;
+    title: string;
+    // index prop is no longer needed here as delay will be handled by OrbitingCircles
 }
 
-// Définition des variants en dehors du composant pour éviter de les recréer à chaque rendu
-const imageVariants = {
-    hidden: {opacity: 0},
-    visible: {opacity: 1}
-}
-
-// Valeur du délai d'animation (définie à l'extérieur pour performance)
-const animationDelay = 0.3
-
-const SkillDataProvider = ({ src, width, height, index ,title} : Props) => {
-    const {ref, inView} = useInView({
-        triggerOnce: true
-    })
-
+const SkillDataProvider = ({ src, width, height, title }: Props) => {
     return (
-        <motion.div
-            ref={ref}
-            initial="hidden"
-            variants={imageVariants}
-            animate={inView ? "visible" : "hidden"}
-            custom={index}
-            transition={{delay: index * animationDelay}}
-        >
             <Image
                 src={src}
                 width={width}
                 height={height}
-                alt='skill image'
+            alt={title} // Use skill_name for alt text for better accessibility
                 title={title}
                 loading='lazy'
+            className="object-contain" // Ensure image scales nicely within its container
             />
-        </motion.div>
-    )
+    );
 }
 
-export default React.memo(SkillDataProvider)
+export default React.memo(SkillDataProvider);

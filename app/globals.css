@@ -41,17 +41,17 @@
   transition: 1.2s;
   @media not all and (min-width: 640px) { 
     border: 3px solid blueviolet;
-    
+
   }
 }
 .Welcome-box:hover{
   background: white;
   border: 3px solid;
-  
+
 }
 .Welcome-box.github:hover {
   background: rgb(70, 70, 70);
-  
+
 }
 .Welcome-text:hover{
   color: #E50914;
@@ -97,8 +97,6 @@
   display: none;
 }
 
-
-
 html {
   scroll-behavior: smooth;
 }
@@ -107,7 +105,7 @@ html {
   flex-direction: column;
   justify-content:space-between;
   align-items: center;
-  
+
 }
 @keyframes fadeIn {
   from {
@@ -134,4 +132,30 @@ html {
 
 .fade-out {
   animation: fadeOut 1.5s ease-in-out forwards;
+}
+
+@layer base {
+  .theme {
+    --animate-orbit: orbit calc(var(--duration)*1s) linear infinite;
+  }
+}
+
+/* @layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+} */
+
+@theme inline {
+  @keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg);
+    }
+  100% {
+    transform: rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg);
+    }
+  }
 }
