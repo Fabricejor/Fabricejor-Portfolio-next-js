@@ -23,7 +23,7 @@ const Projects = () => {
       >
         Tous mes projects
       </Link>
-      <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
+      <div className="h-full w-full flex flex-col md:flex-row gap-2 max-md:px-4 px-4">
         <ProjectCard
           src="/CalameRedaction.png"
           title="Calame Rédaction - site vitrine"

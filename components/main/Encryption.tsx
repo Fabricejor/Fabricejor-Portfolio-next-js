@@ -24,7 +24,7 @@ const Encryption = memo(() => {
     },
     {
       title: "Licence Professionnelle en Génie Logicielle, École supérieur Polytechnique, Dakar",
-      period: "Decembre 2020 — Juillet 2023",
+      period: "Decembre 2020 - Juillet 2023",
       description: "J'ai obtenu une Licence Professionnelle en Génie Logiciel, qui m'a permis de développer des compétences avancées en développement d'applications, gestion de projets informatiques, et en ingénierie logicielle. Cette formation m'a préparé à concevoir des solutions informatiques innovantes en utilisant des technologies récentes, tout en m'adaptant aux évolutions rapides du secteur.",
       link: "https://esp.sn/formations/licence-professionnelle-en-genie-logiciel/",
       linkText: "Esp.sn",
