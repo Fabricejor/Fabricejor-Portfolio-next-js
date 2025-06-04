@@ -18,7 +18,7 @@ function MeshComponent() {
   const fileUrl = "/laptop/scene.gltf";
   const mesh = useRef<Mesh>(null!);
   const gltf = useLoader(GLTFLoader, fileUrl);
-  const textures = useLoader(TextureLoader ,"/laptop/textures/HP_Pavilion_x360_14_dh_metallicRoughness.png");
+  const textures = useLoader(TextureLoader ,"/gojo_wip/textures/material_baseColor.jpeg");
   useFrame(() => {
     mesh.current.rotation.y += 0.005;
     mesh.current.scale.set(10, 10, 10);
