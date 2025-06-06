@@ -39,7 +39,7 @@ export default React.memo(function Contact() {
                                 </h2>
                                 <div className="h-1 w-24 mx-auto bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div>
                                 <p className="text-gray-300 text-lg opacity-80">
-                                    Connectons-nous à travers l'espace numérique
+                                    Prêt à créer quelque chose d'extraordinaire ensemble ?
                                 </p>
                             </div>
 
@@ -50,7 +50,7 @@ export default React.memo(function Contact() {
                                     <input 
                                         type="email" 
                                         className='w-full backdrop-blur-md bg-white/5 border border-cyan-500/30 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/10 transition-all duration-300 focus:shadow-lg focus:shadow-cyan-500/25 group-hover:border-cyan-400/50' 
-                                        placeholder='Votre adresse galactique' 
+                                        placeholder='Votre adresse email' 
                                         aria-label="Votre email" 
                                     />
                                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -61,7 +61,7 @@ export default React.memo(function Contact() {
                                     <input 
                                         type="text" 
                                         className='w-full backdrop-blur-md bg-white/5 border border-cyan-500/30 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/10 transition-all duration-300 focus:shadow-lg focus:shadow-cyan-500/25 group-hover:border-cyan-400/50' 
-                                        placeholder='Transmission spatiale' 
+                                        placeholder='Le sujet de votre message' 
                                         aria-label="Sujet" 
                                     />
                                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -72,7 +72,7 @@ export default React.memo(function Contact() {
                                     <textarea  
                                         rows={5}
                                         className='w-full backdrop-blur-md bg-white/5 border border-cyan-500/30 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/10 transition-all duration-300 focus:shadow-lg focus:shadow-cyan-500/25 group-hover:border-cyan-400/50 resize-none' 
-                                        placeholder='Votre message interstellaire...' 
+                                        placeholder='Votre message, une requête , un commentaire , une suggestion, etc.' 
                                         aria-label="Votre message" 
                                     />
                                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -83,7 +83,7 @@ export default React.memo(function Contact() {
                                     type="submit" 
                                     className='group relative w-full py-4 px-8 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/30 focus:outline-none focus:ring-4 focus:ring-cyan-500/50'>
                                     <span className="relative z-10 flex items-center justify-center gap-2">
-                                        Lancer la transmission
+                                        Envoyer
                                         <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                                         </svg>
