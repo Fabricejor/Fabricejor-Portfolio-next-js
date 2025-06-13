@@ -15,7 +15,7 @@ const Hero = () => {
         playsInline
         preload="metadata" // Charge uniquement les métadonnées
         poster="/poster_banner.png" // Remplacez par le chemin de votre image optimisée
-        className="rotate-180 absolute top-[-340px] max-xl:top-[-230px] h-full w-full left-0 z-[1] object-cover max-sm:top-[-460px]"
+        className="rotate-180 absolute top-[-280px] max-xl:top-[-230px] xl:top-[-200px] h-full w-full left-0 z-[1] object-cover max-sm:top-[-460px]"
       >
         <source src="/Blue fire black hole.mp4" type="video/webm" />
       </video>
