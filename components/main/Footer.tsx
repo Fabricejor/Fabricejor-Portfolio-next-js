@@ -33,27 +33,27 @@ const Footer = () => {
                 <div className="max-w-7xl mx-auto px-8 ">
                     {/* Header Section */}
                     <div className="text-center mb-8 mt-10">
-                        <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500 mb-4">
+                        <h2 className="md:text-base lg:text-2xl xl:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500 mb-4">
                             Connectons-nous
                         </h2>
                         <div className="h-1 w-32 mx-auto bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-4"></div>
-                        <p className="text-gray-300 text-lg opacity-80 max-w-2xl mx-auto">
+                        <p className="text-gray-300 md:text-sm lg:text-base xl:text-xl opacity-80 max-w-2xl mx-auto">
                             Transformons vos idées en expériences  exceptionnelles
                         </p>
                     </div>
 
                     {/* Links Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                         {/* Community Section */}
                         <div className="group relative">
                             <div className="absolute -inset-4 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-xl"></div>
                             <div className="relative  bg-cyan-500/5 border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300">
-                                <h3 className="font-bold text-xl text-cyan-400 mb-8 text-center flex items-center justify-center gap-2">
+                                <h3 className="font-bold  md:text-base lg:text-lg xl:text-2xl text-cyan-400 mb-8 text-center flex items-center justify-center gap-2">
                                     
                                     <FaUsers />
                                     Community
                                 </h3>
-                                <div className="space-y-4">
+                                <div className="space-y-0 xl:space-y-4">
                                     <Link
                                         href="https://www.youtube.com/@fabricejordanramos"
                                         className="group/link flex items-center gap-3 p-3 rounded-xl hover:bg-red-500/20 hover:border-red-400 border border-transparent transition-all duration-300 transform hover:scale-105"
@@ -108,7 +108,7 @@ const Footer = () => {
                                     <ImConnection />
                                     Social Media
                                 </h3>
-                                <div className="space-y-4">
+                                <div className="space-y-0 xl:space-y-4">
                                     <Link
                                         href="https://www.instagram.com/jordan_ramos_disciple_of_god/"
                                         className="group/link flex items-center gap-3 p-3 rounded-xl hover:bg-gradient-to-r hover:from-yellow-500/20 hover:via-pink-500/20 hover:to-purple-500/20 hover:border-pink-400 border border-transparent transition-all duration-300 transform hover:scale-105"
@@ -162,7 +162,7 @@ const Footer = () => {
                                     <FaInfoCircle />
                                     À propos
                                 </h3>
-                                <div className="space-y-4">
+                                <div className="space-y-0 xl:space-y-4">
                                     <Link 
                                         href={"/Inspiration"} 
                                         className="group/link flex items-center gap-3 p-3 rounded-xl hover:bg-purple-500/20 hover:border-purple-400 border border-transparent transition-all duration-300 transform hover:scale-105"
