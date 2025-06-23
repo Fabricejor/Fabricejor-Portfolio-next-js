@@ -1,7 +1,6 @@
 'use client'
 import React, { memo, useMemo, useState, useEffect } from 'react'
 import Image from 'next/image';
-import { Socials } from "@/constants";
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 import { FaBars, FaTimes } from "react-icons/fa"; // Import burger and close icons
@@ -13,72 +12,87 @@ const Navbar = memo(() => {
 
   // Mémorisation des classes CSS communes
   const navbarClasses = useMemo(() => ({
-    container: "w-full h-[65px] fixed top-0 shadow-lg shadow-[#2AOE61]/50 backdrop-blur-md z-50 px-10 max-sm:px-[10px]",
-    innerContainer: "w-full h-full flex flex-row items-center justify-between m-auto px-[10px] max-sm:px-[0px]",
+    container: `w-full h-[80px] fixed top-0 z-50 px-6 max-sm:px-4`,
+    innerContainer: `max-w-7xl mx-auto h-full flex flex-row items-center justify-between`,
+    navWrapper: `w-full h-[65px] bg-[#0300145e] backdrop-blur-md border border-cyan-400/30 rounded-2xl px-8 max-sm:px-4 
+                 shadow-lg shadow-cyan-400/20 
+                 relative overflow-hidden
+                 before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2px] 
+                 before:bg-gradient-to-r before:from-transparent before:via-cyan-400 before:to-transparent 
+                 before:shadow-[0_0_20px_cyan] before:animate-pulse`,
     logo: "h-auto w-auto flex flex-row items-center",
-    desktopLinks: "hidden md:flex flex-row items-center justify-between w-[500px] h-auto border border-[#00B1A8] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200",
-    mobileMenu: "md:hidden flex flex-col items-center bg-[#0300145e] border border-[#00B1A8] px-[20px] py-[10px] rounded-lg mt-2",
-    socialLinks: "flex flex-row gap-5 max-sm:w-[50%]"
+    desktopLinks: "hidden md:flex flex-row items-center justify-center gap-8 flex-1",
+    mobileMenuButton: "md:hidden cursor-pointer z-10",
+    mobileMenu: `md:hidden absolute top-full left-0 right-0 mt-2 mx-6 
+                 bg-[#0300145e] backdrop-blur-md border border-cyan-400/30 rounded-xl px-6 py-4
+                 shadow-lg shadow-cyan-400/20`,
+    link: "relative text-gray-200 hover:text-cyan-400 transition-all duration-300 cursor-pointer group",
+    linkGlow: `after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] 
+               after:bg-cyan-400 after:transition-all after:duration-300 
+               group-hover:after:w-full group-hover:after:shadow-[0_0_8px_cyan]`
   }), []);
 
   useEffect(() => {
-    setBgColor(pathname === "/Inspiration" ? "bg-[#191717]" : "bg-[#03001417]");
-  }, [pathname]); // Ajout de la dépendance pathname
+    setBgColor(pathname === "/Inspiration" ? "" : "");
+  }, [pathname]);
 
   // Mémorisation des liens de navigation
   const navigationLinks = useMemo(() => [
-    { href: "/", label: "Home" },
-    { href: "/AllProjects", label: "Projects" },
+    { href: "/", label: "Accueil" },
+    { href: "/AllProjects", label: "Projets" },
+    { href: "/Inspiration", label: "Inspiration" },
+    { href: "/test", label: "Sandbox" },
     { href: "#Contact-me", label: "Contact" }
   ], []);
 
-  const toggleNav = () => setNavOpen(!navOpen); // Function to toggle burger icon
+  const toggleNav = () => setNavOpen(!navOpen);
+
   return (
     <div className={`${navbarClasses.container} ${bgColor}`}>
-      <div className={navbarClasses.innerContainer}>
-        <a 
-          title="More about me" 
-          href="/" 
-          className={navbarClasses.logo}
-        >
-          <Image
-            src="/hakari handsign.png"
-            alt="logo"
-            height={70}
-            width={70}
-            className="cursor-pointer hover:animate-spin-slow"
-            priority
-          />
-          <span className="font-bold ml-[10px] hidden md:block text-gray-100">
-            Fabricejor DEV FS
-          </span>
-        </a>
+      <div className={navbarClasses.navWrapper}>
+        <div className={navbarClasses.innerContainer}>
+          {/* Logo */}
+          <a 
+            title="More about me" 
+            href="/" 
+            className={navbarClasses.logo}
+          >
+            <Image
+              src="/hakari handsign.png"
+              alt="logo"
+              height={60}
+              width={60}
+              className="cursor-pointer hover:animate-spin-slow"
+              priority
+            />
+            <span className="font-bold ml-[10px] hidden md:block text-gray-100">
+              Fabricejor DEV FS
+            </span>
+          </a>
 
-        {/* Burger Icon for Mobile View */}
-        <div className="md:hidden cursor-pointer" onClick={toggleNav}>
-          {navOpen ? <FaTimes size={30} className="text-gray-100" /> : <FaBars size={30} className="text-gray-100" />}
-        </div>
+          {/* Links for Desktop */}
+          <div className={navbarClasses.desktopLinks}>
+            {navigationLinks.map(({ href, label }) => (
+              <a 
+                key={href} 
+                href={href} 
+                className={`${navbarClasses.link} ${navbarClasses.linkGlow} ${
+                  pathname === href ? 'text-cyan-400' : ''
+                }`}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
 
-        {/* Links for Desktop */}
-        <div className={navbarClasses.desktopLinks}>
-          {navigationLinks.map(({ href, label }) => (
-            <a key={href} href={href} className="cursor-pointer">{label}</a>
-          ))}
-        </div>
-
-        {/* Social Links */}
-        <div className={navbarClasses.socialLinks}>
-          {Socials.map((social) => (
-            <Link href={social.linked} key={social.name}>
-              <Image
-                src={social.src}
-                alt={social.name}
-                width={24}
-                height={24}
-                loading="lazy"
-              />
-            </Link>
-          ))}
+          {/* Burger Icon for Mobile View */}
+          <div className={navbarClasses.mobileMenuButton} onClick={toggleNav}>
+            {navOpen ? (
+              <FaTimes size={28} className="text-gray-100 hover:text-cyan-400 transition-colors" />
+            ) : (
+              <FaBars size={28} className="text-gray-100 hover:text-cyan-400 transition-colors" />
+            )}
+          </div>
         </div>
       </div>
 
@@ -86,7 +100,16 @@ const Navbar = memo(() => {
       {navOpen && (
         <div className={navbarClasses.mobileMenu}>
           {navigationLinks.map(({ href, label }) => (
-            <a key={href} href={href} className="py-2 text-gray-200 cursor-pointer">{label}</a>
+            <a 
+              key={href} 
+              href={href} 
+              className={`block py-3 text-gray-200 hover:text-cyan-400 transition-all duration-300 cursor-pointer ${
+                pathname === href ? 'text-cyan-400' : ''
+              }`}
+              onClick={() => setNavOpen(false)}
+            >
+              {label}
+            </a>
           ))}
         </div>
       )}
@@ -94,5 +117,5 @@ const Navbar = memo(() => {
   )
 })
 
-Navbar.displayName= 'Navbar';
+Navbar.displayName = 'Navbar';
 export default Navbar

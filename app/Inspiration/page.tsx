@@ -13,7 +13,7 @@ export default function Inspiration() {
         loop
         className="rotate-180 absolute top-[-340px]   h-full w-full left-0 z-[1] object-cover max-sm:top-[-340px] "
       >
-        <source src="/red fire black hole.mp4" type="video/webm" />
+        <source src="/blackhole.webm" type="video/webm" />
       </video>
     </div>
     </div>
