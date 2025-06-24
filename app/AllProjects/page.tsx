@@ -18,9 +18,9 @@ export default function AllProjects() {
             <source src="/red fire black hole.mp4" type="video/webm" />
           </video>
           <EveryProjects />
-        <Contact/>
+        {/* <Contact/>
 
-          <Footer />
+          <Footer /> */}
         </div>
       </div>
     </main>

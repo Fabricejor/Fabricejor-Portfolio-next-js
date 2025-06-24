@@ -58,6 +58,7 @@ const EveryProjects = memo(() => {
       source:"https://github.com/matthews-crypto/Gestion_hotel/tree/main/lib",
       technologies: 'Flutter , Dart',
       slides: [
+        "/dev mobile.png",
       ]
     },
     {
@@ -169,8 +170,8 @@ const EveryProjects = memo(() => {
             </div>
           </form>
         </div>
-        <div className="ALL_PROJECTS_CARD w-[100%] flex flex-col items-center mt-0 justify-center max-sm:w-[100%]">
-          {filteredProjects.map((projet, index) => (
+        <div className="ALL_PROJECTS_CARD w-full mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {filteredProjects.map((projet) => (
             <CardProject
               key={projet.titre}
               {...projet}
