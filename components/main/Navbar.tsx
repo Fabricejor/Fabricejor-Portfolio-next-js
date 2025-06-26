@@ -12,7 +12,7 @@ const Navbar = memo(() => {
 
   // Mémorisation des classes CSS communes
   const navbarClasses = useMemo(() => ({
-    container: `w-full h-[80px] fixed top-0 z-50 px-6 max-sm:px-4`,
+    container: `w-full h-[80px] fixed top-0 z-40 px-6 max-sm:px-4`,
     innerContainer: `max-w-7xl mx-auto h-full flex flex-row items-center justify-between`,
     navWrapper: `w-full h-[65px] bg-[#0300145e] backdrop-blur-md border border-cyan-400/30 rounded-2xl px-8 max-sm:px-4 
                  shadow-lg shadow-cyan-400/20 

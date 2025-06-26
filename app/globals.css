@@ -159,3 +159,31 @@ html {
     }
   }
 }
+
+
+/* Start Generation Here */
+/* Custom scrollbar styles */
+.modal-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-container::-webkit-scrollbar-track {
+  background: rgba(31, 41, 55, 0.5);
+  border-radius: 4px;
+}
+
+.modal-container::-webkit-scrollbar-thumb {
+  background: #FB2F37;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.modal-container::-webkit-scrollbar-thumb:hover {
+  background: #e02a32;
+}
+
+/* Firefox scrollbar */
+.modal-container {
+  scrollbar-width: thin;
+  scrollbar-color: #FB2F37 rgba(31, 41, 55, 0.5);
+}
