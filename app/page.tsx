@@ -2,8 +2,8 @@
 
 import dynamic from "next/dynamic";
 import { Suspense, useState, useEffect } from "react";
-import Loader from "@/components/3d-box-loader-animation";
 
+const Loader = dynamic(() => import("@/components/3d-box-loader-animation"), { ssr: false });
 const Heros = dynamic(() => import("@/components/main/Heros"), { suspense: true });
 const Skills = dynamic(() => import("@/components/main/Skills"), { suspense: true });
 const Encryption = dynamic(() => import("@/components/main/Encryption"), { suspense: true });

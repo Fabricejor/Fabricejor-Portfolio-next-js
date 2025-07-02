@@ -1,8 +1,7 @@
 "use client";
 import React, { useState, useMemo, memo } from "react";
-import { HiCommandLine } from "react-icons/hi2";
-import { FaSearch } from "react-icons/fa";
 import dynamic from 'next/dynamic';
+import GlowingSearchBar from "../GlowingSearchBar";
 
 // Import dynamique de CardProject
 const CardProject = dynamic(() => import("./CardProject"), {
@@ -109,9 +108,8 @@ const EveryProjects = memo(() => {
   // Mémorisation des styles communs
   const styles = useMemo(() => ({
     container: "flex flex-row bg-[rgb(25,23,23)] items-center justify-center px-20 mt-20 max-sm:px-2 w-full max-sm:flex-row max-sm:mb-[1vh] max-sm:mt-[20vh]",
-    searchInput: "w-full max-w-lg pl-10 pr-4 py-2 bg-gray-800 bg-opacity-50 focus:bg-opacity-90 text-white rounded-lg border-2 border-gray-300 border-opacity-20 focus:outline-none focus:ring-4 focus:ring-slate-500 shadow-lg",
-    suggestionsList: "absolute bg-gray-700 bg-opacity-90 text-white w-full mt-1 rounded-lg shadow-lg max-h-40 overflow-y-auto",
-    suggestionItem: "px-4 py-2 cursor-pointer hover:bg-gray-600"
+    suggestionsList: "absolute bg-gray-700 bg-opacity-90 text-white w-full mt-1 rounded-lg shadow-lg max-h-40 overflow-y-auto z-10",
+    suggestionItem: "px-4 py-2 text-center cursor-pointer hover:bg-gray-600"
   }), []);
 
   // Optimisation de la fonction de filtrage des titres
@@ -143,16 +141,13 @@ const EveryProjects = memo(() => {
         <div className="SearchBar w-[100%] h-full max-sm:w-[70%]">
           <form className="Searchbar-input flex flex-row items-center justify-center gap-4 max-sm:flex-col">
             <div className="relative w-full max-w-lg max-sm:ml-[40%]">
-              <FaSearch className="absolute right-[10%] top-[30%] text-gray-400 translate-y-[-5%]" />
-              <input
-                type="text"
-                placeholder="Search by Title"
+              <GlowingSearchBar
                 value={titleQuery}
                 onChange={handleTitleInputChange}
-                className={styles.searchInput}
+                placeholder="Search by Title"
               />
               {filteredTitleSuggestions.length > 0 && (
-                <ul className={styles.suggestionsList}>
+                <ul className={styles.suggestionsList} style={{width: '100%'}}>
                   {filteredTitleSuggestions.map((suggestion, index) => (
                     <li
                       key={index}

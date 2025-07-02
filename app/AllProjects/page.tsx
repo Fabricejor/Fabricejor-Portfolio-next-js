@@ -20,7 +20,7 @@ export default function AllProjects() {
           <EveryProjects />
         {/* <Contact/>
 
-          <Footer /> */}
+          // <Footer /> */}
         </div>
       </div>
     </main>
