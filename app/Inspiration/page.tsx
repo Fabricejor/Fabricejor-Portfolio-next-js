@@ -17,10 +17,10 @@ export default function Inspiration() {
           </video>
           
           {/* Container principal avec fond #060016 */}
-          <div className="relative mt-20  w-full min-h-screen  h-full flex flex-col items-center justify-center p-8" style={{backgroundColor: '#060016'}}>
+          <div className="relative mt-44  w-full   h-full flex flex-col items-center justify-center p-8" style={{backgroundColor: '#060016'}}>
             
             {/* Fenêtre macOS */}
-            <div className="relative w-full z-[2] max-w-5xl xl:max-w-[90vw] h-full bg-black/20 backdrop-blur-md border border-purple-500 rounded-xl shadow-2xl overflow-hidden">
+            <div className="relative w-full z-[2] max-w-5xl xl:max-w-[90vw] h-full bg-black/20 backdrop-blur-md border border-purple-500 rounded-xl shadow-2xl ">
               
               {/* Barre de titre macOS */}
               <div className="flex items-center justify-between px-4 py-3 bg-black/30 border-b border-purple-500/30">
@@ -42,7 +42,7 @@ export default function Inspiration() {
               <div className="flex flex-col lg:flex-row h-full">
                 
                 {/* Section Image */}
-                <div className="lg:w-1/3 w-full h-48 lg:h-full relative ">
+                <div className="lg:w-1/3 w-full h-full lg:h-full relative  overflow-hidden ">
                 <img 
                     src="/all-character-jjk-inspiration1.jpg" 
                     alt="All Characters JJK" 
@@ -53,8 +53,8 @@ export default function Inspiration() {
                 </div>
                 
                 {/* Section Texte */}
-                <div className="lg:w-2/3 w-full p-6 flex flex-col justify-center">
-                  <h2 className="text-2xl font-bold text-white mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <div className="lg:w-2/3 w-full h-full p-6 flex flex-col justify-center">
+                  <h2 className="lg:text-2xl text-xl font-bold text-white mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                     Jujutsu Kaisen
                   </h2>
                   <p className="text-gray-300 leading-relaxed text-justify mb-4">
